@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="S3DPoint.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="55" topLine="0" />
+	</File>
+	<File name="S3DPoint.h" open="0" top="0" tabpos="0">
+		<Cursor position="316" topLine="0" />
+	</File>
+	<File name="S3DPrimitive.h" open="0" top="0" tabpos="0">
+		<Cursor position="664" topLine="0" />
+	</File>
+	<File name="S3DRect.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="2247" topLine="74" />
+	</File>
+	<File name="S3DRect.h" open="0" top="0" tabpos="0">
+		<Cursor position="546" topLine="0" />
+	</File>
+	<File name="S3DTriangle.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="3056" topLine="89" />
+	</File>
+	<File name="S3DTriangle.h" open="0" top="0" tabpos="0">
+		<Cursor position="567" topLine="0" />
+	</File>
+	<File name="Simple3D.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="2483" topLine="36" />
+	</File>
+	<File name="Simple3D.h" open="1" top="0" tabpos="2">
+		<Cursor position="582" topLine="0" />
+	</File>
+	<File name="global.h" open="0" top="0" tabpos="0">
+		<Cursor position="103" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="types.h" open="0" top="0" tabpos="0">
+		<Cursor position="440" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1272372865 source:c:\dev\simple3d\main.cpp
+	"Simple3D.h"
+	<iostream>
+	<cstdlib>
+
+1272373048 c:\dev\simple3d\simple3d.h
+	<cmath>
+	<string>
+	<list>
+	"global.h"
+	"types.h"
+	"S3DTriangle.h"
+	"S3DRect.h"
+	<cstring>
+	<cstdlib>
+	<iostream>
+
+1272373094 c:\dev\simple3d\global.h
+	<windows.h>
+	"types.h"
+
+1272373101 c:\dev\simple3d\types.h
+
+1272373086 c:\dev\simple3d\s3dtriangle.h
+	"S3DPoint.h"
+	"S3DPrimitive.h"
+
+1272373073 c:\dev\simple3d\s3dpoint.h
+	"global.h"
+	"S3DPrimitive.h"
+
+1272373078 c:\dev\simple3d\s3dprimitive.h
+	"global.h"
+	<cmath>
+	<iostream>
+
+1272373082 c:\dev\simple3d\s3drect.h
+	"S3DPoint.h"
+	"S3DPrimitive.h"
+
+1272372838 source:c:\dev\simple3d\simple3d.cpp
+	"Simple3D.h"
+	<iostream>
+
+1272325443 source:c:\dev\simple3d\s3dtriangle.cpp
+	"S3DTriangle.h"
+	<iostream>
+
+1272312020 source:c:\dev\simple3d\s3dprimitive.cpp
+	"S3DPrimitive.h"
+
+1272325333 source:c:\dev\simple3d\s3dpoint.cpp
+	"S3DPoint.h"
+
+1272325601 source:c:\dev\simple3d\s3drect.cpp
+	"S3DRect.h"
+
