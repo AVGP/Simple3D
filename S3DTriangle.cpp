@@ -1,5 +1,17 @@
+/**
+* @file S3DTriangle.cpp Contains the implementation of S3DTriangle.
+*/
 #include "S3DTriangle.h"
 #include <iostream>
+
+/**
+* @brief Constructor for the triangle.
+* @param[in] points Array of three S3DPoints, marking the points,
+*			 		the triangle is made of.
+*
+* Constructs a new instance of S3Triangle based upon the points
+* supplied.
+*/
 
 S3DTriangle::S3DTriangle(S3DPoint points[3])
 {
@@ -7,6 +19,16 @@ S3DTriangle::S3DTriangle(S3DPoint points[3])
 	for(int i=0;i<3;i++) vertices[i] = points[i];
 	id = ++id_max;
 }
+
+/**
+* @brief Constructor for the triangle.
+* @param[in] a First point, the triangle will be build upon.
+* @param[in] b Second point, the triangle will be build upon.
+* @param[in] c Third point, the triangle will be build upon.
+*
+* Constructs a new instance of S3Triangle based upon the points
+* supplied.
+*/
 S3DTriangle::S3DTriangle(S3DPoint a, S3DPoint b, S3DPoint c)
 {
 	isFilled = false;
@@ -15,11 +37,21 @@ S3DTriangle::S3DTriangle(S3DPoint a, S3DPoint b, S3DPoint c)
 	vertices[2] = c;
 }
 
+/**
+* @brief Returns an array of the points, the triangle is built upon.
+* @return Array of three S3DPoints.
+*/
 S3DPoint *S3DTriangle::getPoints()
 {
 	return vertices;
 }
 
+/**
+* @brief Moves the triangle (translates it) relative to its coordinates
+* @param[in] dx The distance the triangle is moved in x-direction
+* @param[in] dy The distance the triangle is moved in y-direction
+* @param[in] dz The distance the triangle is moved in z-direction
+*/
 void S3DTriangle::move(double dx,double dy,double dz)
 {
 	for(int i=0;i<3;i++)
@@ -28,6 +60,18 @@ void S3DTriangle::move(double dx,double dy,double dz)
 	}
 }
 
+/**
+* @brief Rotates the triangle around its center or another anchor point
+* @param[in] rx The angle the triangle should be rotated around the x-axis
+* @param[in] ry The angle the triangle should be rotated around the y-axis
+* @param[in] rz The angle the triangle should be rotated around the z-axis
+* @param[in] anchor Optional. The point the triangle should be rotated around,
+* 					instead of its own center. 
+*
+* This function allows to rotate the triangle around all three axis in any angle.
+* If no anchor-point is passed, the triangle will be rotated around its own center,
+* else it will rotate around the given point.
+*/
 void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 {
 	double dx = 0,dy = 0,dz = 0;
@@ -94,6 +138,18 @@ void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	}
 }
 
+/**
+* @brief Draws the triangle
+* @param[in] disp 	The display device, the line will be drawn to
+* @param[in] window The surface, the line will be drawn to
+* @param[in] gc		The context, the line will be drawn to
+* @param zbuffer	Pointer to the S3DZBuffer-Instance of the Simple3D-Instance.
+*
+* Draws the triangle by drawing the triangles it consists of.
+* This method does NOT contain platform-specific calls anymore, because it uses
+* the underlying triangles to draw the triangle. The meaning and neccessity of disp,
+* window and gc may vary between different platforms
+*/
 void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuffer *zbuffer)
 {  
 
@@ -175,7 +231,6 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 		{
 			int intersects = 0;
 			int t_x = -2,f_x1 = -1,f_x2 = -1;
-			bool inside = false;
 			for(int x=0;x<w;x++)
 			{
 				if(boundary[x+(y*w)] == true)
@@ -202,16 +257,30 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 	delete[] boundary;
 }
 
+/**
+* @brief Sets the color the triangle is drawn in.
+* @param[in] c Color (unsigned long as produced by the RGB-macro) that will be used to draw the triangle.
+*/
 void S3DTriangle::setColor(unsigned long c)
 {
 	color = c;
 }
 
+/**
+* @brief Returns the color the triangle is drawn in.
+* @return Color (unsigned long as produced by the RGB-macro) of the triangle.
+*/
 unsigned long S3DTriangle::getColor()
 {
 	return color;
 }
 
+/**
+* @brief Returns the z-coordinate for the center of the triangle.
+*
+* This function is used for Z-Buffering and currently also for the painter's algorithm
+* to determine the order in which the entities get drawn.
+*/
 double S3DTriangle::getZ()
 {
 	return (vertices[0].z + vertices[1].z + vertices[2].z)/3.0;

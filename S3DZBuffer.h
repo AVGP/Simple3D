@@ -1,15 +1,26 @@
+/**
+* @file S3DZBuffer.h Contains the definition of S3DZBuffer.
+*/
 #ifndef _S3D_ZBUFFER_H_
 #define _S3D_ZBUFFER_H_
+
+#include "global.h"
+
+/**
+* @class S3DZBuffer
+* @brief This class is responsible for z-buffering.
+*
+* This class is the foundation of the z-buffering.
+* Its used to determine, if a pixel should be drawn or not
+* and is used in S3DLine and S3DPoint to check and update the
+* z-buffer, before/after the actual drawing. Simple3D manages
+* to keep the z-buffer clean and passes the reference to the
+* entities.
+*/
 class S3DZBuffer
 {
 	public:
-	  S3DZBuffer(int w, int h)
-	  {
-		  buffer = new int[w*h];
-		  width  = w;
-		  height = h;
-		  for(int i=0;i<w*h;i++) buffer[i] = PLANAR_DISTANCE*2;
-	  };
+	  S3DZBuffer(int w, int h);
 	  int getPoint(int x,int y);
 	  void setPoint(int x,int y,int z);
 	  void clear();

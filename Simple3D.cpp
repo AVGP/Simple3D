@@ -1,6 +1,17 @@
+/**
+* @file Simple3D.cpp Contains the implementation of S3D's core.
+*/
 #include "Simple3D.h"
 #include <iostream>
 
+/**
+* @brief The default constructor. You need to call this to initialize the engine.
+* @param[in] width The width of the desired screen.
+* @param[in] height The height of the desired screen.
+* @param[in] title You can supply a title for a window here.
+* @param[in] argc The number of arguments passed to your application (optional)
+* @param[in] argv The arguments passed to your application (optional)
+*/
 Simple3D::Simple3D(int width, int height,std::string title,int argc, char **argv)
 {
 	for(int i=0;i<argc;i++)
@@ -41,6 +52,9 @@ Simple3D::Simple3D(int width, int height,std::string title,int argc, char **argv
 	zbuffer = new S3DZBuffer(width,height);
 }
 
+/**
+* @brief Destructor. Call this to clean up after you're ready with S3D.
+*/
 Simple3D::~Simple3D()
 {
 	delete zbuffer;
@@ -48,6 +62,12 @@ Simple3D::~Simple3D()
 	XDestroyWindow(disp,window);
 }
 
+/**
+* @brief Renders the entities known to the instance of Simple3D.
+*
+* You need to call this, when you want to render the entities,
+* you have propagated to the engine-instance.
+*/
 void Simple3D::render()
 {
 	XClearWindow(disp,window);
@@ -89,15 +109,33 @@ void Simple3D::render()
 	zbuffer->clear();
 }
 
+/**
+* @brief Set the background color
+* @param[in] c Color (unsigned int as produced by the RGB-macro) to use as background.
+* 
+* Call this to set the color used by the engine as background. Default color is black.
+*/
 void Simple3D::setBackColor(S3DColor c)
 {
 	XSetBackground(disp,gc,RGB(c.r,c.g,c.b));
 }
+
+/**
+* @brief Set the background color
+* @param[in] c Color (unsigned int as produced by the RGB-macro) to use as background.
+* 
+* Call this to set the color used by the engine for rendering, when no other color is
+* specified. Default color is white. Note: The axis are (if displayed) drawn in this color.
+*/
 void Simple3D::setForeColor(S3DColor c)
 {
 	XSetForeground(disp,gc,RGB(c.r,c.g,c.b));	
 }
 
+/**
+* @brief Obtain an event from the engine's window.
+* @return Returns an S3DEvent-structure. When there was no event, S3DEventNone is returned.
+*/
 S3DEvent Simple3D::getEvent()
 {
 	XEvent event;
@@ -119,11 +157,23 @@ S3DEvent Simple3D::getEvent()
 	}
 }
 
+/**
+* @brief Propagate entity to the engine.
+* @param[in] p Pointer to the primitive you want to enqueue for rendering.
+*
+* You need to call this function in order to get an entity on screen. Only
+* entities enqueued through this function are rendered.
+*/
 void Simple3D::appendEntity(S3DPrimitive *p)
 {
 	entityList.push_back(p);
 }
 
+/**
+* @brief Reorders entities for correct rendering.
+*
+* This gets called from inside the engine. You don't need to fiddle with this.
+*/
 void Simple3D::reOrderEntities()
 {
 	std::list<S3DPrimitive *>ordered;
@@ -149,4 +199,3 @@ void Simple3D::reOrderEntities()
 	}
 	entityList.swap(ordered);
 }
-

@@ -1,3 +1,7 @@
+/**
+* @file global.h
+* @brief Contains basic includes (including platform-dependent) and definitions for the whole library.
+*/
 #ifndef _S3D_GLOBAL_H_
 #define _S3D_GLOBAL_H_
 

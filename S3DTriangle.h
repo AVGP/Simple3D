@@ -1,3 +1,6 @@
+/**
+* @file S3DTriangle.h Contains the definition for S3DTriangle.
+*/
 #ifndef _S3D_TRIANGLE_H_
 #define _S3D_TRIANGLE_H_
 
@@ -6,6 +9,14 @@
 #include "S3DLine.h"
 #include "S3DZBuffer.h"
 
+/**
+* @class S3DTriangle
+* @brief This is the main primitive actually used.
+*
+* This is the mostly used primitive, because all complex primitives
+* base upon triangles. It is platform-independent, because all drawing
+* is done using S3DLine.
+*/
 class S3DTriangle : public S3DPrimitive
 {
   private:

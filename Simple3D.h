@@ -1,3 +1,6 @@
+/**
+* @file Simple3D.h Contains the engine's main class definitions.
+*/
 #ifndef _S3D_H_
 #define _S3D_H_
 
@@ -19,6 +22,14 @@
 #include <cstdlib>
 #include <iostream>
 
+/**
+* @class Simple3D
+* @brief This class is the main class of the engine.
+*
+* You need to create an instance of this class to use the engine.
+* It manages the platform-specific things on initialization, handles events
+* and renders primitives to screen.
+*/
 class Simple3D
 {
   private:

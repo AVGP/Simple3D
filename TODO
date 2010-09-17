@@ -1,3 +1,4 @@
+-> Porting the other primitives (Cube, Tetraeder, Rect) to base on triangles!
 -> Scaling von Triangles/Meshes
 -> Z-Buffer implementieren
 -> Primitives auf Triangle-Subdivision umstellen

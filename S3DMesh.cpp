@@ -1,5 +1,15 @@
+/**
+* @file S3DMesh.cpp Contains the code for loading an entity from a file and use it. 
+*/
 #include "S3DMesh.h"
 
+/**
+* @brief Constructor for the Mesh, loads data from a file.
+* @param[in] file The filename of the file containing the data
+*
+* Constructs a new instance of S3DMesh and loads data from a file to
+* build a series of triangles, ready to be rendered on screen.
+*/
 S3DMesh::S3DMesh(const char *file)
 {
 	std::ifstream stream;
@@ -56,6 +66,18 @@ S3DMesh::S3DMesh(const char *file)
 	reorderTriangles();
 }
 
+/**
+* @brief Draws the mesh
+* @param[in] disp 	The display device, the line will be drawn to
+* @param[in] window The surface, the line will be drawn to
+* @param[in] gc		The context, the line will be drawn to
+* @param zbuffer	Pointer to the S3DZBuffer-Instance of the Simple3D-Instance.
+*
+* Draws the mesh by drawing the triangles it consists of.
+* This method does NOT contain platform-specific calls anymore, because it uses
+* the underlying triangles to draw the mesh. The meaning and neccessity of disp,
+* window and gc may vary between different platforms
+*/
 void S3DMesh::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer)
 {
 	for(int i=0;i<polygons.size();i++)
@@ -64,6 +86,18 @@ void S3DMesh::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 	}
 }
 
+/**
+* @brief Rotates the mesh around its center or another anchor point
+* @param[in] rx The angle the mesh should be rotated around the x-axis
+* @param[in] ry The angle the mesh should be rotated around the y-axis
+* @param[in] rz The angle the mesh should be rotated around the z-axis
+* @param[in] anchor Optional. The point the mesh should be rotated around,
+* 					instead of its own center. 
+*
+* This function allows to rotate the mesh around all three axis in any angle.
+* If no anchor-point is passed, the mesh will be rotated around its own center,
+* else it will rotate around the given point.
+*/
 void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 {
 	for(int i=0;i<polygons.size();i++)
@@ -73,6 +107,12 @@ void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	reorderTriangles();
 }
 
+/**
+* @brief Moves the mesh (translates it) relative to its coordinates
+* @param[in] dx The distance the mesh is moved in x-direction
+* @param[in] dy The distance the mesh is moved in y-direction
+* @param[in] dz The distance the mesh is moved in z-direction
+*/
 void S3DMesh::move(double dx,double dy,double dz)
 {
 	center.x += dx;
@@ -85,6 +125,13 @@ void S3DMesh::move(double dx,double dy,double dz)
 	}
 }
 
+/**
+* @brief Reorders the triangles of the mesh for correct drawing
+* 
+* This function only needs to be called from methods changing the
+* underlying triangles in any way, to ensure the mesh is displayed
+* correctly.
+*/
 void S3DMesh::reorderTriangles()
 {
 	std::vector<S3DTriangle> reordered;
@@ -109,3 +156,14 @@ void S3DMesh::reorderTriangles()
 	}
 	polygons.swap(reordered);
 }
+
+/**
+* @brief Returns the z-coordinate for the center of the mesh.
+*
+* This function is used for Z-Buffering and currently also for the painter's algorithm
+* to determine the order in which the entities get drawn.
+*/
+double S3DMesh::getZ()
+{
+	return center.z;
+};

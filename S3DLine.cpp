@@ -1,5 +1,14 @@
+/**
+* @file S3DLine.cpp
+* @brief Contains the implementation of the S3DLine-Primitive
+*/
 #include "S3DLine.h"
 
+/**
+* @brief Creates a line between two (3D-)Points
+* @param[in] a First endpoint of the line
+* @param[in] b Second endpoint of the line
+*/
 S3DLine::S3DLine(S3DPoint a, S3DPoint b)
 {
 	ends[0] = a;
@@ -7,6 +16,12 @@ S3DLine::S3DLine(S3DPoint a, S3DPoint b)
 	projected = false;
 }
 
+/**
+* @brief Moves the line (translates it) relative to its coordinates
+* @param[in] dx The distance the line is moved in x-direction
+* @param[in] dy The distance the line is moved in y-direction
+* @param[in] dz The distance the line is moved in z-direction
+*/
 void S3DLine::move(double dx,double dy,double dz)
 {
 	ends[0].x += dx;
@@ -18,6 +33,18 @@ void S3DLine::move(double dx,double dy,double dz)
 	ends[1].z += dz;
 }
 
+/**
+* @brief Rotates the line around its center or another anchor point
+* @param[in] rx The angle the line should be rotated around the x-axis
+* @param[in] ry The angle the line should be rotated around the y-axis
+* @param[in] rz The angle the line should be rotated around the z-axis
+* @param[in] anchor Optional. The point the line should be rotated around,
+* 					instead of its own center. 
+*
+* This function allows to rotate the line around all three axis in any angle.
+* If no anchor-point is passed, the line will be rotated around its own center,
+* else it will rotate around the given point.
+*/
 void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 {
 	double dx = 0,dy = 0,dz = 0;
@@ -90,6 +117,17 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	}
 }
 
+/**
+* @brief Draws the line
+* @param[in] disp 	The display device, the line will be drawn to
+* @param[in] window The surface, the line will be drawn to
+* @param[in] gc		The context, the line will be drawn to
+* @param zbuffer	Pointer to the S3DZBuffer-Instance of the Simple3D-Instance.
+*
+* This method is used to draw the line on screen, by using the platform-specific
+* way of drawing points on some sort of screen. The meaning and neccessity of disp,
+* window and gc may vary between different platforms
+*/
 void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer)
 {
 	int x1,x2,y1,y2,z1,z2;
@@ -264,4 +302,45 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 	}
 //End of experimental code. Phew. We made it through alive!
 */
+}
+
+/**
+* @brief Returns the z-coordinate for the center of the line.
+*
+* This function is used for Z-Buffering and currently also for the painter's algorithm
+* to determine the order in which the entities get drawn.
+*/
+double S3DLine::getZ()
+{
+	return (ends[0].z < ends[1].z ? ends[0].z : ends[1].z)+(abs(ends[0].z-ends[1].z)/2.0);
+}
+
+/**
+* @brief Sets the color of the line
+* @param[in] c The color (as unsigned long, as produced by the RGB-macro) the line should be drawn in.
+*/
+void S3DLine::setColor(unsigned long c)
+{
+	color = c;
+}
+
+/**
+* @brief Returns the color of the line.
+* @return The color (as unsigned long, as produced by the RGB-macro) the line is drawn in.
+*/
+unsigned long S3DLine::getColor()
+{
+	return color;
+}
+
+/**
+* @brief Setting the coordinate mode to projected coordinates.
+* @param[in] p Set this to "true", if you used projected 2D-coordinates in the constructor, else set this to false.
+*
+* The draw-Method usually projects the three-dimensional coordinates to 2D screen-coordinates. This can be suppressed
+* by setting the coordinate mode to projected via calling setProjected(true).
+*/
+void S3DLine::setProjected(bool p)
+{
+	projected = p;
 }
