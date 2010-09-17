@@ -1,0 +1,184 @@
+\hypertarget{class_s3_d_triangle}{
+\section{S3DTriangle Class Reference}
+\label{class_s3_d_triangle}\index{S3DTriangle@{S3DTriangle}}
+}
+
+
+This is the main primitive actually used.  
+
+
+
+
+{\ttfamily \#include $<$S3DTriangle.h$>$}
+
+Inheritance diagram for S3DTriangle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_s3_d_triangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s3_d_triangle_a2ac27d0814934c422e3fbf593c77014e}{S3DTriangle} (\hyperlink{class_s3_d_point}{S3DPoint} points\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor for the triangle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_s3_d_triangle_a6709f19586226831dc2a50466e3e669e}{S3DTriangle} (\hyperlink{class_s3_d_point}{S3DPoint} a, \hyperlink{class_s3_d_point}{S3DPoint} b, \hyperlink{class_s3_d_point}{S3DPoint} c)
+\begin{DoxyCompactList}\small\item\em Constructor for the triangle. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_triangle_a7f168122e4ed627fcb6489852a56982b}{move} (double dx, double dy, double dz)
+\begin{DoxyCompactList}\small\item\em Moves the triangle (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_triangle_a3e739f6c9c176e58cb734db7328cf039}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)
+\begin{DoxyCompactList}\small\item\em Rotates the triangle around its center or another anchor point. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{draw} (\hyperlink{types_8h_a25c0773a29204332721bde1b164d0b84}{S3DDevice} $\ast$disp, \hyperlink{types_8h_a4afc89c514af26434688c7e8b382ba5e}{S3DSurface} window, \hyperlink{types_8h_a46f30693e0040340e595d8228cc31779}{S3DContext} gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
+\begin{DoxyCompactList}\small\item\em Draws the triangle. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}{setColor} (unsigned long c)
+\begin{DoxyCompactList}\small\item\em Sets the color the triangle is drawn in. \item\end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_s3_d_triangle_ade8ba96094206ee3dff5c3bc743e0a1c}{getColor} ()
+\begin{DoxyCompactList}\small\item\em Returns the color the triangle is drawn in. \item\end{DoxyCompactList}\item 
+\hyperlink{class_s3_d_point}{S3DPoint} $\ast$ \hyperlink{class_s3_d_triangle_a1032adb6846335a47c8e8c0355b69dbd}{getPoints} ()
+\begin{DoxyCompactList}\small\item\em Returns an array of the points, the triangle is built upon. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_s3_d_triangle_a35428b5799c8d51a6c57d1fdb5b575a1}{getZ} ()
+\begin{DoxyCompactList}\small\item\em Returns the z-\/coordinate for the center of the triangle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the main primitive actually used. This is the mostly used primitive, because all complex primitives base upon triangles. It is platform-\/independent, because all drawing is done using \hyperlink{class_s3_d_line}{S3DLine}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s3_d_triangle_a2ac27d0814934c422e3fbf593c77014e}{
+\index{S3DTriangle@{S3DTriangle}!S3DTriangle@{S3DTriangle}}
+\index{S3DTriangle@{S3DTriangle}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{S3DTriangle}]{\setlength{\rightskip}{0pt plus 5cm}S3DTriangle::S3DTriangle ({\bf S3DPoint} {\em points}\mbox{[}3\mbox{]})}}
+\label{class_s3_d_triangle_a2ac27d0814934c422e3fbf593c77014e}
+
+
+Constructor for the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em points}]Array of three S3DPoints, marking the points, the triangle is made of.\end{DoxyParams}
+Constructs a new instance of S3Triangle based upon the points supplied. \hypertarget{class_s3_d_triangle_a6709f19586226831dc2a50466e3e669e}{
+\index{S3DTriangle@{S3DTriangle}!S3DTriangle@{S3DTriangle}}
+\index{S3DTriangle@{S3DTriangle}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{S3DTriangle}]{\setlength{\rightskip}{0pt plus 5cm}S3DTriangle::S3DTriangle ({\bf S3DPoint} {\em a}, \/  {\bf S3DPoint} {\em b}, \/  {\bf S3DPoint} {\em c})}}
+\label{class_s3_d_triangle_a6709f19586226831dc2a50466e3e669e}
+
+
+Constructor for the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em a}]First point, the triangle will be build upon. \item[\mbox{$\leftarrow$} {\em b}]Second point, the triangle will be build upon. \item[\mbox{$\leftarrow$} {\em c}]Third point, the triangle will be build upon.\end{DoxyParams}
+Constructs a new instance of S3Triangle based upon the points supplied. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{
+\index{S3DTriangle@{S3DTriangle}!draw@{draw}}
+\index{draw@{draw}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::draw ({\bf S3DDevice} $\ast$ {\em disp}, \/  {\bf S3DSurface} {\em window}, \/  {\bf S3DContext} {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}
+
+
+Draws the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em disp}]The display device, the line will be drawn to \item[\mbox{$\leftarrow$} {\em window}]The surface, the line will be drawn to \item[\mbox{$\leftarrow$} {\em gc}]The context, the line will be drawn to \item[{\em zbuffer}]Pointer to the S3DZBuffer-\/Instance of the Simple3D-\/Instance.\end{DoxyParams}
+Draws the triangle by drawing the triangles it consists of. This method does NOT contain platform-\/specific calls anymore, because it uses the underlying triangles to draw the triangle. The meaning and neccessity of disp, window and gc may vary between different platforms 
+
+Implements \hyperlink{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_triangle_ade8ba96094206ee3dff5c3bc743e0a1c}{
+\index{S3DTriangle@{S3DTriangle}!getColor@{getColor}}
+\index{getColor@{getColor}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long S3DTriangle::getColor ()}}
+\label{class_s3_d_triangle_ade8ba96094206ee3dff5c3bc743e0a1c}
+
+
+Returns the color the triangle is drawn in. 
+
+\begin{DoxyReturn}{Returns}
+Color (unsigned long as produced by the RGB-\/macro) of the triangle. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_triangle_a1032adb6846335a47c8e8c0355b69dbd}{
+\index{S3DTriangle@{S3DTriangle}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{getPoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S3DPoint} $\ast$ S3DTriangle::getPoints ()}}
+\label{class_s3_d_triangle_a1032adb6846335a47c8e8c0355b69dbd}
+
+
+Returns an array of the points, the triangle is built upon. 
+
+\begin{DoxyReturn}{Returns}
+Array of three S3DPoints. 
+\end{DoxyReturn}
+\hypertarget{class_s3_d_triangle_a35428b5799c8d51a6c57d1fdb5b575a1}{
+\index{S3DTriangle@{S3DTriangle}!getZ@{getZ}}
+\index{getZ@{getZ}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}double S3DTriangle::getZ ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_triangle_a35428b5799c8d51a6c57d1fdb5b575a1}
+
+
+Returns the z-\/coordinate for the center of the triangle. 
+
+This function is used for Z-\/Buffering and currently also for the painter's algorithm to determine the order in which the entities get drawn. 
+
+Implements \hyperlink{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_triangle_a7f168122e4ed627fcb6489852a56982b}{
+\index{S3DTriangle@{S3DTriangle}!move@{move}}
+\index{move@{move}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::move (double {\em dx}, \/  double {\em dy}, \/  double {\em dz})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_triangle_a7f168122e4ed627fcb6489852a56982b}
+
+
+Moves the triangle (translates it) relative to its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em dx}]The distance the triangle is moved in x-\/direction \item[\mbox{$\leftarrow$} {\em dy}]The distance the triangle is moved in y-\/direction \item[\mbox{$\leftarrow$} {\em dz}]The distance the triangle is moved in z-\/direction \end{DoxyParams}
+
+
+Implements \hyperlink{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_triangle_a3e739f6c9c176e58cb734db7328cf039}{
+\index{S3DTriangle@{S3DTriangle}!rotate@{rotate}}
+\index{rotate@{rotate}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::rotate (double {\em rx}, \/  double {\em ry}, \/  double {\em rz}, \/  {\bf S3DPoint} $\ast$ {\em anchor} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_triangle_a3e739f6c9c176e58cb734db7328cf039}
+
+
+Rotates the triangle around its center or another anchor point. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em rx}]The angle the triangle should be rotated around the x-\/axis \item[\mbox{$\leftarrow$} {\em ry}]The angle the triangle should be rotated around the y-\/axis \item[\mbox{$\leftarrow$} {\em rz}]The angle the triangle should be rotated around the z-\/axis \item[\mbox{$\leftarrow$} {\em anchor}]Optional. The point the triangle should be rotated around, instead of its own center.\end{DoxyParams}
+This function allows to rotate the triangle around all three axis in any angle. If no anchor-\/point is passed, the triangle will be rotated around its own center, else it will rotate around the given point. 
+
+Implements \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}{
+\index{S3DTriangle@{S3DTriangle}!setColor@{setColor}}
+\index{setColor@{setColor}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::setColor (unsigned long {\em c})}}
+\label{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}
+
+
+Sets the color the triangle is drawn in. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em c}]Color (unsigned long as produced by the RGB-\/macro) that will be used to draw the triangle. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_s3_d_primitive_a1c8f036193987522bdfb6a49b9b74000}{S3DPrimitive}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s3_d_triangle_8h}{S3DTriangle.h}\item 
+\hyperlink{_s3_d_triangle_8cpp}{S3DTriangle.cpp}\end{DoxyCompactItemize}

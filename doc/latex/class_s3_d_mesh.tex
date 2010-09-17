@@ -1,0 +1,120 @@
+\hypertarget{class_s3_d_mesh}{
+\section{S3DMesh Class Reference}
+\label{class_s3_d_mesh}\index{S3DMesh@{S3DMesh}}
+}
+
+
+This class is used to load a collection of triangles to use it as an entity.  
+
+
+
+
+{\ttfamily \#include $<$S3DMesh.h$>$}
+
+Inheritance diagram for S3DMesh:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_s3_d_mesh}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s3_d_mesh_a810cf0f60312bc574e347d6248499258}{S3DMesh} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Constructor for the Mesh, loads data from a file. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}{draw} (\hyperlink{types_8h_a25c0773a29204332721bde1b164d0b84}{S3DDevice} $\ast$disp, \hyperlink{types_8h_a4afc89c514af26434688c7e8b382ba5e}{S3DSurface} window, \hyperlink{types_8h_a46f30693e0040340e595d8228cc31779}{S3DContext} gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
+\begin{DoxyCompactList}\small\item\em Draws the mesh. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_mesh_a15edf10bf8a749627f11235c618734f7}{move} (double dx, double dy, double dz)
+\begin{DoxyCompactList}\small\item\em Moves the mesh (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_mesh_affff1ac3ef33b293a9ec9881a4e13993}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)
+\begin{DoxyCompactList}\small\item\em Rotates the mesh around its center or another anchor point. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_s3_d_mesh_aa11c4dd0ce01443c07afaabc0e206881}{getZ} ()
+\begin{DoxyCompactList}\small\item\em Returns the z-\/coordinate for the center of the mesh. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to load a collection of triangles to use it as an entity. This class allows to load a collection of triangles from a file to get a complex entity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s3_d_mesh_a810cf0f60312bc574e347d6248499258}{
+\index{S3DMesh@{S3DMesh}!S3DMesh@{S3DMesh}}
+\index{S3DMesh@{S3DMesh}!S3DMesh@{S3DMesh}}
+\subsubsection[{S3DMesh}]{\setlength{\rightskip}{0pt plus 5cm}S3DMesh::S3DMesh (const char $\ast$ {\em file})}}
+\label{class_s3_d_mesh_a810cf0f60312bc574e347d6248499258}
+
+
+Constructor for the Mesh, loads data from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em file}]The filename of the file containing the data\end{DoxyParams}
+Constructs a new instance of \hyperlink{class_s3_d_mesh}{S3DMesh} and loads data from a file to build a series of triangles, ready to be rendered on screen. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}{
+\index{S3DMesh@{S3DMesh}!draw@{draw}}
+\index{draw@{draw}!S3DMesh@{S3DMesh}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DMesh::draw ({\bf S3DDevice} $\ast$ {\em disp}, \/  {\bf S3DSurface} {\em window}, \/  {\bf S3DContext} {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}
+
+
+Draws the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em disp}]The display device, the line will be drawn to \item[\mbox{$\leftarrow$} {\em window}]The surface, the line will be drawn to \item[\mbox{$\leftarrow$} {\em gc}]The context, the line will be drawn to \item[{\em zbuffer}]Pointer to the S3DZBuffer-\/Instance of the Simple3D-\/Instance.\end{DoxyParams}
+Draws the mesh by drawing the triangles it consists of. This method does NOT contain platform-\/specific calls anymore, because it uses the underlying triangles to draw the mesh. The meaning and neccessity of disp, window and gc may vary between different platforms 
+
+Implements \hyperlink{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_mesh_aa11c4dd0ce01443c07afaabc0e206881}{
+\index{S3DMesh@{S3DMesh}!getZ@{getZ}}
+\index{getZ@{getZ}!S3DMesh@{S3DMesh}}
+\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}double S3DMesh::getZ ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_mesh_aa11c4dd0ce01443c07afaabc0e206881}
+
+
+Returns the z-\/coordinate for the center of the mesh. 
+
+This function is used for Z-\/Buffering and currently also for the painter's algorithm to determine the order in which the entities get drawn. 
+
+Implements \hyperlink{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_mesh_a15edf10bf8a749627f11235c618734f7}{
+\index{S3DMesh@{S3DMesh}!move@{move}}
+\index{move@{move}!S3DMesh@{S3DMesh}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void S3DMesh::move (double {\em dx}, \/  double {\em dy}, \/  double {\em dz})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_mesh_a15edf10bf8a749627f11235c618734f7}
+
+
+Moves the mesh (translates it) relative to its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em dx}]The distance the mesh is moved in x-\/direction \item[\mbox{$\leftarrow$} {\em dy}]The distance the mesh is moved in y-\/direction \item[\mbox{$\leftarrow$} {\em dz}]The distance the mesh is moved in z-\/direction \end{DoxyParams}
+
+
+Implements \hyperlink{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_mesh_affff1ac3ef33b293a9ec9881a4e13993}{
+\index{S3DMesh@{S3DMesh}!rotate@{rotate}}
+\index{rotate@{rotate}!S3DMesh@{S3DMesh}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}void S3DMesh::rotate (double {\em rx}, \/  double {\em ry}, \/  double {\em rz}, \/  {\bf S3DPoint} $\ast$ {\em anchor} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_mesh_affff1ac3ef33b293a9ec9881a4e13993}
+
+
+Rotates the mesh around its center or another anchor point. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em rx}]The angle the mesh should be rotated around the x-\/axis \item[\mbox{$\leftarrow$} {\em ry}]The angle the mesh should be rotated around the y-\/axis \item[\mbox{$\leftarrow$} {\em rz}]The angle the mesh should be rotated around the z-\/axis \item[\mbox{$\leftarrow$} {\em anchor}]Optional. The point the mesh should be rotated around, instead of its own center.\end{DoxyParams}
+This function allows to rotate the mesh around all three axis in any angle. If no anchor-\/point is passed, the mesh will be rotated around its own center, else it will rotate around the given point. 
+
+Implements \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{S3DPrimitive}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s3_d_mesh_8h}{S3DMesh.h}\item 
+\hyperlink{_s3_d_mesh_8cpp}{S3DMesh.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\hypertarget{class_s3_d_line}{
+\section{S3DLine Class Reference}
+\label{class_s3_d_line}\index{S3DLine@{S3DLine}}
+}
+
+
+Class for the line-\/primitive in S3D.  
+
+
+
+
+{\ttfamily \#include $<$S3DLine.h$>$}
+
+Inheritance diagram for S3DLine:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_s3_d_line}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s3_d_line_ae6eeda40b82f27193b1d1165a8fb3e63}{S3DLine} (\hyperlink{class_s3_d_point}{S3DPoint} a, \hyperlink{class_s3_d_point}{S3DPoint} b)
+\begin{DoxyCompactList}\small\item\em Creates a line between two (3D-\/)Points. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_line_aa7732c2d83fecb5d9934863d0e7875c1}{draw} (\hyperlink{types_8h_a25c0773a29204332721bde1b164d0b84}{S3DDevice} $\ast$disp, \hyperlink{types_8h_a4afc89c514af26434688c7e8b382ba5e}{S3DSurface} window, \hyperlink{types_8h_a46f30693e0040340e595d8228cc31779}{S3DContext} gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
+\begin{DoxyCompactList}\small\item\em Draws the line. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_line_a38203e499c32f14ff5da3b7c17861881}{move} (double dx, double dy, double dz)
+\begin{DoxyCompactList}\small\item\em Moves the line (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_line_a4d23495df2c8f45855d8b80d30b01d30}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)
+\begin{DoxyCompactList}\small\item\em Rotates the line around its center or another anchor point. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_s3_d_line_a72aabdbb4d3d0c3ea36f5fda7b059f6a}{getZ} ()
+\begin{DoxyCompactList}\small\item\em Returns the z-\/coordinate for the center of the line. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_line_a9feaf056477e858a7b0248a7b5cdd222}{setColor} (unsigned long c)
+\begin{DoxyCompactList}\small\item\em Sets the color of the line. \item\end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_s3_d_line_a62b49873ae3356cf997ca1fd87a1b7de}{getColor} ()
+\begin{DoxyCompactList}\small\item\em Returns the color of the line. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_line_a3b973e5206d4bed73b797b4c5afe8dec}{setProjected} (bool p)
+\begin{DoxyCompactList}\small\item\em Setting the coordinate mode to projected coordinates. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the line-\/primitive in S3D. This class implements three-\/dimensional lines as the basis of all other primitives in S3D The line is the only primitive that is drawn using platform-\/dependent functions, all superior primitives will use this class to draw themselves. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s3_d_line_ae6eeda40b82f27193b1d1165a8fb3e63}{
+\index{S3DLine@{S3DLine}!S3DLine@{S3DLine}}
+\index{S3DLine@{S3DLine}!S3DLine@{S3DLine}}
+\subsubsection[{S3DLine}]{\setlength{\rightskip}{0pt plus 5cm}S3DLine::S3DLine ({\bf S3DPoint} {\em a}, \/  {\bf S3DPoint} {\em b})}}
+\label{class_s3_d_line_ae6eeda40b82f27193b1d1165a8fb3e63}
+
+
+Creates a line between two (3D-\/)Points. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em a}]First endpoint of the line \item[\mbox{$\leftarrow$} {\em b}]Second endpoint of the line \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s3_d_line_aa7732c2d83fecb5d9934863d0e7875c1}{
+\index{S3DLine@{S3DLine}!draw@{draw}}
+\index{draw@{draw}!S3DLine@{S3DLine}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DLine::draw ({\bf S3DDevice} $\ast$ {\em disp}, \/  {\bf S3DSurface} {\em window}, \/  {\bf S3DContext} {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_line_aa7732c2d83fecb5d9934863d0e7875c1}
+
+
+Draws the line. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em disp}]The display device, the line will be drawn to \item[\mbox{$\leftarrow$} {\em window}]The surface, the line will be drawn to \item[\mbox{$\leftarrow$} {\em gc}]The context, the line will be drawn to \item[{\em zbuffer}]Pointer to the S3DZBuffer-\/Instance of the Simple3D-\/Instance.\end{DoxyParams}
+This method is used to draw the line on screen, by using the platform-\/specific way of drawing points on some sort of screen. The meaning and neccessity of disp, window and gc may vary between different platforms 
+
+Implements \hyperlink{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_line_a62b49873ae3356cf997ca1fd87a1b7de}{
+\index{S3DLine@{S3DLine}!getColor@{getColor}}
+\index{getColor@{getColor}!S3DLine@{S3DLine}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long S3DLine::getColor ()}}
+\label{class_s3_d_line_a62b49873ae3356cf997ca1fd87a1b7de}
+
+
+Returns the color of the line. 
+
+\begin{DoxyReturn}{Returns}
+The color (as unsigned long, as produced by the RGB-\/macro) the line is drawn in. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_line_a72aabdbb4d3d0c3ea36f5fda7b059f6a}{
+\index{S3DLine@{S3DLine}!getZ@{getZ}}
+\index{getZ@{getZ}!S3DLine@{S3DLine}}
+\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}double S3DLine::getZ ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_line_a72aabdbb4d3d0c3ea36f5fda7b059f6a}
+
+
+Returns the z-\/coordinate for the center of the line. 
+
+This function is used for Z-\/Buffering and currently also for the painter's algorithm to determine the order in which the entities get drawn. 
+
+Implements \hyperlink{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_line_a38203e499c32f14ff5da3b7c17861881}{
+\index{S3DLine@{S3DLine}!move@{move}}
+\index{move@{move}!S3DLine@{S3DLine}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void S3DLine::move (double {\em dx}, \/  double {\em dy}, \/  double {\em dz})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_line_a38203e499c32f14ff5da3b7c17861881}
+
+
+Moves the line (translates it) relative to its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em dx}]The distance the line is moved in x-\/direction \item[\mbox{$\leftarrow$} {\em dy}]The distance the line is moved in y-\/direction \item[\mbox{$\leftarrow$} {\em dz}]The distance the line is moved in z-\/direction \end{DoxyParams}
+
+
+Implements \hyperlink{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_line_a4d23495df2c8f45855d8b80d30b01d30}{
+\index{S3DLine@{S3DLine}!rotate@{rotate}}
+\index{rotate@{rotate}!S3DLine@{S3DLine}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}void S3DLine::rotate (double {\em rx}, \/  double {\em ry}, \/  double {\em rz}, \/  {\bf S3DPoint} $\ast$ {\em anchor} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_s3_d_line_a4d23495df2c8f45855d8b80d30b01d30}
+
+
+Rotates the line around its center or another anchor point. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em rx}]The angle the line should be rotated around the x-\/axis \item[\mbox{$\leftarrow$} {\em ry}]The angle the line should be rotated around the y-\/axis \item[\mbox{$\leftarrow$} {\em rz}]The angle the line should be rotated around the z-\/axis \item[\mbox{$\leftarrow$} {\em anchor}]Optional. The point the line should be rotated around, instead of its own center.\end{DoxyParams}
+This function allows to rotate the line around all three axis in any angle. If no anchor-\/point is passed, the line will be rotated around its own center, else it will rotate around the given point. 
+
+Implements \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_line_a9feaf056477e858a7b0248a7b5cdd222}{
+\index{S3DLine@{S3DLine}!setColor@{setColor}}
+\index{setColor@{setColor}!S3DLine@{S3DLine}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void S3DLine::setColor (unsigned long {\em c})}}
+\label{class_s3_d_line_a9feaf056477e858a7b0248a7b5cdd222}
+
+
+Sets the color of the line. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em c}]The color (as unsigned long, as produced by the RGB-\/macro) the line should be drawn in. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_s3_d_primitive_a1c8f036193987522bdfb6a49b9b74000}{S3DPrimitive}.
+
+\hypertarget{class_s3_d_line_a3b973e5206d4bed73b797b4c5afe8dec}{
+\index{S3DLine@{S3DLine}!setProjected@{setProjected}}
+\index{setProjected@{setProjected}!S3DLine@{S3DLine}}
+\subsubsection[{setProjected}]{\setlength{\rightskip}{0pt plus 5cm}void S3DLine::setProjected (bool {\em p})}}
+\label{class_s3_d_line_a3b973e5206d4bed73b797b4c5afe8dec}
+
+
+Setting the coordinate mode to projected coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em p}]Set this to \char`\"{}true\char`\"{}, if you used projected 2D-\/coordinates in the constructor, else set this to false.\end{DoxyParams}
+The draw-\/Method usually projects the three-\/dimensional coordinates to 2D screen-\/coordinates. This can be suppressed by setting the coordinate mode to projected via calling setProjected(true). 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s3_d_line_8h}{S3DLine.h}\item 
+\hyperlink{_s3_d_line_8cpp}{S3DLine.cpp}\end{DoxyCompactItemize}

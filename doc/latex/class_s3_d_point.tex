@@ -1,0 +1,129 @@
+\hypertarget{class_s3_d_point}{
+\section{S3DPoint Class Reference}
+\label{class_s3_d_point}\index{S3DPoint@{S3DPoint}}
+}
+
+
+This class is used for representing 3d-\/coordinates.  
+
+
+
+
+{\ttfamily \#include $<$S3DPoint.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s3_d_point_adad5537c6692acccab628a6bc105d20e}{S3DPoint} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_s3_d_point_ab03f0683b11340e8071eb8cdde1811b3}{S3DPoint} (double \hyperlink{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{x}, double \hyperlink{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{y}, double \hyperlink{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{z})
+\begin{DoxyCompactList}\small\item\em Mostly used constructor used for creating S3DPoints. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_point_a18bbc742cbadc8d49d0600c3f80caf91}{move} (double dx, double dy, double dz)
+\begin{DoxyCompactList}\small\item\em Moves the point (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_point_a59aee595c8ae9bfbb60915a09c06b0aa}{draw} (Display $\ast$d, Window w, GC g)
+\begin{DoxyCompactList}\small\item\em Draws the point. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}{rotate} (double rx, double ry, double rz)
+\item 
+double \hyperlink{class_s3_d_point_a255a77e4ca340344be1b1bd6b6a3f418}{getZ} ()
+\begin{DoxyCompactList}\small\item\em Returns the z-\/coordinate for the point. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{x}
+\item 
+double \hyperlink{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{y}
+\item 
+double \hyperlink{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used for representing 3d-\/coordinates. This class is a representation of a point in 3D-\/space, thus a coordinate-\/triplet (x,y,z), that can be drawn though its not a primitive itself. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s3_d_point_adad5537c6692acccab628a6bc105d20e}{
+\index{S3DPoint@{S3DPoint}!S3DPoint@{S3DPoint}}
+\index{S3DPoint@{S3DPoint}!S3DPoint@{S3DPoint}}
+\subsubsection[{S3DPoint}]{\setlength{\rightskip}{0pt plus 5cm}S3DPoint::S3DPoint ()}}
+\label{class_s3_d_point_adad5537c6692acccab628a6bc105d20e}
+
+
+Default constructor. 
+
+Creates a new instance of \hyperlink{class_s3_d_point}{S3DPoint} with coordinates (0,0,0), so the origin. \hypertarget{class_s3_d_point_ab03f0683b11340e8071eb8cdde1811b3}{
+\index{S3DPoint@{S3DPoint}!S3DPoint@{S3DPoint}}
+\index{S3DPoint@{S3DPoint}!S3DPoint@{S3DPoint}}
+\subsubsection[{S3DPoint}]{\setlength{\rightskip}{0pt plus 5cm}S3DPoint::S3DPoint (double {\em px}, \/  double {\em py}, \/  double {\em pz})}}
+\label{class_s3_d_point_ab03f0683b11340e8071eb8cdde1811b3}
+
+
+Mostly used constructor used for creating S3DPoints. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em px}]X-\/Coordinate of the point \item[\mbox{$\leftarrow$} {\em py}]Y-\/Coordinate of the point \item[\mbox{$\leftarrow$} {\em pz}]Z-\/Coordinate of the point\end{DoxyParams}
+Creates an new instance of a three-\/dimensional point with coordinates (x,y,z). Used in every primary to determine coordinates and used in projections. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s3_d_point_a59aee595c8ae9bfbb60915a09c06b0aa}{
+\index{S3DPoint@{S3DPoint}!draw@{draw}}
+\index{draw@{draw}!S3DPoint@{S3DPoint}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DPoint::draw (Display $\ast$ {\em d}, \/  Window {\em w}, \/  GC {\em g})}}
+\label{class_s3_d_point_a59aee595c8ae9bfbb60915a09c06b0aa}
+
+
+Draws the point. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em disp}]The display device, the line will be drawn to \item[\mbox{$\leftarrow$} {\em window}]The surface, the line will be drawn to \item[\mbox{$\leftarrow$} {\em gc}]The context, the line will be drawn to \item[{\em zbuffer}]Pointer to the S3DZBuffer-\/Instance of the Simple3D-\/Instance.\end{DoxyParams}
+Draws the point using platform-\/dependent methods. The meaning and neccessity of disp, window and gc may vary between different platforms \hypertarget{class_s3_d_point_a255a77e4ca340344be1b1bd6b6a3f418}{
+\index{S3DPoint@{S3DPoint}!getZ@{getZ}}
+\index{getZ@{getZ}!S3DPoint@{S3DPoint}}
+\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}double S3DPoint::getZ ()}}
+\label{class_s3_d_point_a255a77e4ca340344be1b1bd6b6a3f418}
+
+
+Returns the z-\/coordinate for the point. 
+
+This function is used for Z-\/Buffering and currently also for the painter's algorithm to determine the order in which the entities get drawn. \hypertarget{class_s3_d_point_a18bbc742cbadc8d49d0600c3f80caf91}{
+\index{S3DPoint@{S3DPoint}!move@{move}}
+\index{move@{move}!S3DPoint@{S3DPoint}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void S3DPoint::move (double {\em dx}, \/  double {\em dy}, \/  double {\em dz})}}
+\label{class_s3_d_point_a18bbc742cbadc8d49d0600c3f80caf91}
+
+
+Moves the point (translates it) relative to its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em dx}]The distance the point is moved in x-\/direction \item[\mbox{$\leftarrow$} {\em dy}]The distance the point is moved in y-\/direction \item[\mbox{$\leftarrow$} {\em dz}]The distance the point is moved in z-\/direction \end{DoxyParams}
+\hypertarget{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}{
+\index{S3DPoint@{S3DPoint}!rotate@{rotate}}
+\index{rotate@{rotate}!S3DPoint@{S3DPoint}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}void S3DPoint::rotate (double {\em rx}, \/  double {\em ry}, \/  double {\em rz})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{
+\index{S3DPoint@{S3DPoint}!x@{x}}
+\index{x@{x}!S3DPoint@{S3DPoint}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf S3DPoint::x}}}
+\label{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}
+\hypertarget{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{
+\index{S3DPoint@{S3DPoint}!y@{y}}
+\index{y@{y}!S3DPoint@{S3DPoint}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf S3DPoint::y}}}
+\label{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}
+\hypertarget{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{
+\index{S3DPoint@{S3DPoint}!z@{z}}
+\index{z@{z}!S3DPoint@{S3DPoint}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf S3DPoint::z}}}
+\label{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s3_d_point_8h}{S3DPoint.h}\item 
+\hyperlink{_s3_d_point_8cpp}{S3DPoint.cpp}\end{DoxyCompactItemize}

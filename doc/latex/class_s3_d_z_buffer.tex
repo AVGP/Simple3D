@@ -1,0 +1,87 @@
+\hypertarget{class_s3_d_z_buffer}{
+\section{S3DZBuffer Class Reference}
+\label{class_s3_d_z_buffer}\index{S3DZBuffer@{S3DZBuffer}}
+}
+
+
+This class is responsible for z-\/buffering.  
+
+
+
+
+{\ttfamily \#include $<$S3DZBuffer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s3_d_z_buffer_a8983fb4278e5baaa4bdf076f8e28d940}{S3DZBuffer} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_s3_d_z_buffer_aba5f79850772a0500a629443e413e402}{getPoint} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Gets the z-\/buffer value for the given coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_z_buffer_aa712e633bf2ccf4c43bb27178a1692c1}{setPoint} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em Sets the z-\/buffer value for the given coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_z_buffer_ab2b22d8f910724846765813cc6e8457e}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the z-\/buffer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is responsible for z-\/buffering. This class is the foundation of the z-\/buffering. Its used to determine, if a pixel should be drawn or not and is used in \hyperlink{class_s3_d_line}{S3DLine} and \hyperlink{class_s3_d_point}{S3DPoint} to check and update the z-\/buffer, before/after the actual drawing. \hyperlink{class_simple3_d}{Simple3D} manages to keep the z-\/buffer clean and passes the reference to the entities. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s3_d_z_buffer_a8983fb4278e5baaa4bdf076f8e28d940}{
+\index{S3DZBuffer@{S3DZBuffer}!S3DZBuffer@{S3DZBuffer}}
+\index{S3DZBuffer@{S3DZBuffer}!S3DZBuffer@{S3DZBuffer}}
+\subsubsection[{S3DZBuffer}]{\setlength{\rightskip}{0pt plus 5cm}S3DZBuffer::S3DZBuffer (int {\em w}, \/  int {\em h})}}
+\label{class_s3_d_z_buffer_a8983fb4278e5baaa4bdf076f8e28d940}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em w}]Width of the buffer (i.e. width of the screen) \item[\mbox{$\leftarrow$} {\em h}]Height of the buffer (i.e. height of the screen)\end{DoxyParams}
+The constructor is called from within \hyperlink{class_simple3_d}{Simple3D} on initialization. You should not call it yourself. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s3_d_z_buffer_ab2b22d8f910724846765813cc6e8457e}{
+\index{S3DZBuffer@{S3DZBuffer}!clear@{clear}}
+\index{clear@{clear}!S3DZBuffer@{S3DZBuffer}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void S3DZBuffer::clear ()}}
+\label{class_s3_d_z_buffer_ab2b22d8f910724846765813cc6e8457e}
+
+
+Clears the z-\/buffer. 
+
+\hypertarget{class_s3_d_z_buffer_aba5f79850772a0500a629443e413e402}{
+\index{S3DZBuffer@{S3DZBuffer}!getPoint@{getPoint}}
+\index{getPoint@{getPoint}!S3DZBuffer@{S3DZBuffer}}
+\subsubsection[{getPoint}]{\setlength{\rightskip}{0pt plus 5cm}int S3DZBuffer::getPoint (int {\em x}, \/  int {\em y})}}
+\label{class_s3_d_z_buffer_aba5f79850772a0500a629443e413e402}
+
+
+Gets the z-\/buffer value for the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em x}]The x-\/coordinate of the point on screen \item[\mbox{$\leftarrow$} {\em y}]The y-\/coordinate of the point on screen \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The z-\/Buffer value (i.e. the z-\/coordinate of the drawn point) for the coordinates (x,y) 
+\end{DoxyReturn}
+\hypertarget{class_s3_d_z_buffer_aa712e633bf2ccf4c43bb27178a1692c1}{
+\index{S3DZBuffer@{S3DZBuffer}!setPoint@{setPoint}}
+\index{setPoint@{setPoint}!S3DZBuffer@{S3DZBuffer}}
+\subsubsection[{setPoint}]{\setlength{\rightskip}{0pt plus 5cm}void S3DZBuffer::setPoint (int {\em x}, \/  int {\em y}, \/  int {\em z})}}
+\label{class_s3_d_z_buffer_aa712e633bf2ccf4c43bb27178a1692c1}
+
+
+Sets the z-\/buffer value for the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em x}]The x-\/coordinate of the point on screen \item[\mbox{$\leftarrow$} {\em y}]The y-\/coordinate of the point on screen \item[\mbox{$\leftarrow$} {\em z}]The z-\/value of the point on screen \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s3_d_z_buffer_8h}{S3DZBuffer.h}\item 
+\hyperlink{_s3_d_z_buffer_8cpp}{S3DZBuffer.cpp}\end{DoxyCompactItemize}
