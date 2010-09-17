@@ -1,10 +1,10 @@
 #ifndef _S3DPrimitive_
 #define _S3DPrimitive_
 
-#include "global.h"
 #include <cmath>
 #include <iostream>
 #include <vector>
+#include "global.h"
 #include "S3DPoint.h"
 #include "S3DZBuffer.h"
 
@@ -14,8 +14,8 @@ class S3DPrimitive
 		bool isFilled;
 		unsigned long color;
 	public:
-		static unsigned int id_max;
-		unsigned int id;	  
+		static unsigned int id_max; //unused at the moment
+		unsigned int id;	  		//unused at the moment
 
 		virtual void draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer) = 0;
 		virtual void rotate(double rx,double ry,double rz, S3DPoint *anchor=NULL) = 0;

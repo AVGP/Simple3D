@@ -1,11 +1,11 @@
-#ifndef _S3DGLOBAL_
-#define _S3DGLOBAL_
+#ifndef _S3D_GLOBAL_H_
+#define _S3D_GLOBAL_H_
 
+#include <cstdlib>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xos.h>
 #include "types.h"
-#include <cstdlib>
 
 #define PI 3.14159
 #define RGB(r,g,b) ((r << 16) | (g << 8) | b)

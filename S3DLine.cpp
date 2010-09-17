@@ -29,14 +29,14 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	
 	if(anchor != NULL)
 	{
-		//Um den Ankerpunkt positionieren
+		//positioning, so we rotate around the anchor-point
 		dx = -1.0 * anchor->x;
 		dy = -1.0 * anchor->y;
 		dz = -1.0 * anchor->z;
 	}
 	else
 	{
-		//Um den Ursprung positionieren
+		//positioning, so we rotate around the center of the line
 		dx = -1.0 * cx;
 		dy = -1.0 * cy;
 		dz = -1.0 * cz;
@@ -49,8 +49,8 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 		ends[i].z += dz;
 	}
 	
-//Drehen
-	//Um Z-Achse
+//Rotation:
+	//around z-axis
 	double angle_z = rz * PI/180.0;
 	for(int i=0;i<2;i++)
 	{
@@ -60,7 +60,7 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	  ends[i].y = sin(angle_z) * o_x + cos(angle_z) * o_y;
 	}
 
-	//Um Y-Achse
+	//around y-axis
 	double angle_y = ry * PI/180.0;
 	for(int i=0;i<2;i++)
 	{
@@ -70,7 +70,7 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	  ends[i].x = sin(angle_y) * o_z + cos(angle_y) * o_x;
 	}
 
-	//Um X-Achse
+	//around x-axis
 	double angle_x = rx * PI/180.0;
 	for(int i=0;i<2;i++)
 	{
@@ -80,7 +80,7 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	  ends[i].y = sin(angle_x) * o_z + cos(angle_x) * o_y;
 	}
 
-//Zurückverschieben
+//Move it back to its original position.
 	
 	for(int i=0;i<2;i++)
 	{
@@ -93,13 +93,14 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer)
 {
 	int x1,x2,y1,y2,z1,z2;
+	//Are the coordinates in ends[] already projected or are they still 3D?
 	if(projected)
 	{
-		x1 = ends[0].x;//(int)PLANAR_DISTANCE*(ends[0].x/(ends[0].z/2.0));
-		x2 = ends[1].x;//(int)PLANAR_DISTANCE*(ends[1].x/(ends[1].z/2.0));
+		x1 = ends[0].x;
+		x2 = ends[1].x;
 
-		y1 = ends[0].y;//(int)PLANAR_DISTANCE*(ends[0].y/(ends[0].z/2.0));
-		y2 = ends[1].y;//(int)PLANAR_DISTANCE*(ends[1].y/(ends[1].z/2.0));
+		y1 = ends[0].y;
+		y2 = ends[1].y;
 	}
 	else
 	{
@@ -109,10 +110,11 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 		y1 = (int)PLANAR_DISTANCE*(ends[0].y/(ends[0].z/2.0));
 		y2 = (int)PLANAR_DISTANCE*(ends[1].y/(ends[1].z/2.0));
 	}
+
 	z1 = ends[0].z;
 	z2 = ends[1].z;
 
-//ORIGINAL
+//This code works, but needs to be changed for z-buffering :(
 
 	int dx  = x2-x1;
 	int dy  = y2-y1;
@@ -168,7 +170,7 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 		}
 	}
 
-//TEST
+//This is experimental for z-buffering. Not working at the moment!
 /*
 	int dx  = x2-x1;
 	int dy  = y2-y1;
@@ -260,6 +262,6 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 			z += ((dz > 0) ? 1 : -1);
 		}
 	}
-//TESTENDE
+//End of experimental code. Phew. We made it through alive!
 */
 }

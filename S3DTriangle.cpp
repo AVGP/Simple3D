@@ -33,14 +33,14 @@ void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	double dx = 0,dy = 0,dz = 0;
 	if(anchor != NULL)
 	{
-		//Um den Ankerpunkt positionieren
+		//Positioning, to rotate around the anchor
 		dx = -1.0 * anchor->x;
 		dy = -1.0 * anchor->y;
 		dz = -1.0 * anchor->z;
 	}
 	else
 	{
-		//Um den Ursprung positionieren
+		//Positioning, to rotate around the triangle's center
 		dx = -1.0 * (vertices[0].x + vertices[1].x + vertices[2].x)/3.0;
 		dy = -1.0 * (vertices[0].y + vertices[1].y + vertices[2].y)/3.0;
 		dz = -1.0 * (vertices[0].z + vertices[1].z + vertices[2].z)/3.0;
@@ -53,8 +53,8 @@ void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 		vertices[i].z += dz;
 	}
 	
-//Drehen
-	//Um Z-Achse
+//Rotation
+	//around z-axis
 	double angle_z = rz * PI/180.0;
 	for(int i=0;i<3;i++)
 	{
@@ -64,7 +64,7 @@ void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	  vertices[i].y = sin(angle_z) * o_x + cos(angle_z) * o_y;
 	}
 
-	//Um Y-Achse
+	//around y-axis
 	double angle_y = ry * PI/180.0;
 	for(int i=0;i<3;i++)
 	{
@@ -74,7 +74,7 @@ void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	  vertices[i].x = sin(angle_y) * o_z + cos(angle_y) * o_x;
 	}
 
-	//Um X-Achse
+	//around x-axis
 	double angle_x = rx * PI/180.0;
 	for(int i=0;i<3;i++)
 	{
@@ -84,7 +84,7 @@ void S3DTriangle::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 	  vertices[i].y = sin(angle_x) * o_z + cos(angle_x) * o_y;
 	}
 
-//Zurückverschieben
+//Move back to original position
 	
 	for(int i=0;i<3;i++)
 	{
@@ -122,12 +122,11 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 		}
 		int w = r_x - l_x + 1,h = r_y - l_y + 1;
 		
-//TEST
 	boundary = new bool[(w*h)];
 	memset((void *)boundary,false,w*h);
 	for(int i=0;i<3;i++)
 	{
-		//Rastern
+		//Rastering
 		int x1 = (int)PLANAR_DISTANCE*(vertices[i].x/(vertices[i].z/2.0));
 		int x2 = (int)PLANAR_DISTANCE*(vertices[(i+1)%3].x/(vertices[(i+1)%3].z/2.0));
 
@@ -151,7 +150,7 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 					err += abs(dx);
 				}
 				x += ((dx > 0) ? 1 : -1);
-				boundary[(x-l_x)+((y-l_y)*w)] = true;// !boundary[(x-l_x)+((y-l_y)*w)];
+				boundary[(x-l_x)+((y-l_y)*w)] = true;
 			}
 		}
 		else
@@ -166,11 +165,11 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 				}
 				y += ((dy > 0) ? 1 : -1);
 
-				boundary[(x-l_x)+((y-l_y)*w)] = true;// !boundary[(x-l_x)+((y-l_y)*w)];
+				boundary[(x-l_x)+((y-l_y)*w)] = true;
 			}
 		}
 	}
-//Boundary-Bestimmung Ende
+//finished setting the boundaries.
 		
 		for(int y=0;y<h;y++)
 		{
@@ -190,7 +189,7 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 					t_x = x;
 				}
 			}
-			if(intersects > 1) //XDrawLine(disp,window,gc,l_x+f_x1,l_y+y,l_x+f_x2,l_y+y);
+			if(intersects > 1)
 			{
 				S3DLine l(S3DPoint(l_x+f_x1,l_y+y,-10),
 						  S3DPoint(l_x+f_x2,l_y+y,-10));

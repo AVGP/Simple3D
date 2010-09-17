@@ -32,7 +32,7 @@ class Simple3D
 	unsigned long backColor;
 	unsigned long foreColor;
 	unsigned int width,height;
-	unsigned char options; //Bitmaske für Optionen.
+	unsigned char options; //Bitmask for options. See types.h for possible values.
 	S3DBitmap backbuffer;
 	S3DZBuffer *zbuffer;
 	

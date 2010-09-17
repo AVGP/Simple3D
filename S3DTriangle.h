@@ -1,5 +1,5 @@
-#ifndef _S3DTriangle_
-#define _S3DTriangle_
+#ifndef _S3D_TRIANGLE_H_
+#define _S3D_TRIANGLE_H_
 
 #include "S3DPoint.h"
 #include "S3DPrimitive.h"
@@ -11,7 +11,7 @@ class S3DTriangle : public S3DPrimitive
   private:
 	S3DPoint vertices[3];
 	unsigned long color;
-	bool *boundary;//[1000000];
+	bool *boundary;
   public:  
 	S3DTriangle(S3DPoint points[3]);
 	S3DTriangle(S3DPoint a, S3DPoint b, S3DPoint c);

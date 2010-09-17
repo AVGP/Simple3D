@@ -1,5 +1,5 @@
-#ifndef _S3DPoint_
-#define _S3DPoint_
+#ifndef _S3D_POINT_H_
+#define _S3D_POINT_H_
 
 #include "global.h"
 

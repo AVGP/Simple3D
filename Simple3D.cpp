@@ -8,6 +8,7 @@ Simple3D::Simple3D(int width, int height,std::string title,int argc, char **argv
 		if(argv[i][1] == 'D') options |= S3DOptionDebug;
 		if(argv[i][1] == 'A') options |= S3DOptionDrawAxis;
 	}
+	//This is temporary...hopefully :D
 	options |= S3DOptionDrawAxis;
 	
 	disp = XOpenDisplay((char *)0);
@@ -61,9 +62,9 @@ void Simple3D::render()
 		XDrawLine(disp,backbuffer,gc,0,0,width,height);
 	}
 	
-	//Sortieren für Painter's-Algo
+	//sorting entities for using the painter's algorithm
 	reOrderEntities();
-	//Ausgeben:
+	//And lets go!
 	
 	std::list<S3DPrimitive *>::iterator iter = entityList.begin();
 	while(iter != entityList.end())
@@ -125,7 +126,6 @@ void Simple3D::appendEntity(S3DPrimitive *p)
 
 void Simple3D::reOrderEntities()
 {
-	//
 	std::list<S3DPrimitive *>ordered;
 	std::list<S3DPrimitive *>::iterator max = entityList.begin();
 	

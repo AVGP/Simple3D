@@ -1,10 +1,11 @@
 #ifndef _S3D_MESH_H_
 #define _S3D_MESH_H_
 
-#include "S3DTriangle.h"
 #include <fstream>
 #include <vector>
 #include <iostream>
+
+#include "S3DTriangle.h"
 
 class S3DMesh : public S3DPrimitive
 {
@@ -18,8 +19,6 @@ class S3DMesh : public S3DPrimitive
 	std::vector<S3DTriangle> polygons;
 	S3DPoint center;
 	void reorderTriangles();
-  protected:
-	void updateBoundaries() {};
 };
 
 #endif

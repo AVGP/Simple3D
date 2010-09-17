@@ -6,7 +6,6 @@ S3DMesh::S3DMesh(const char *file)
 	stream.open(file,std::ios::in|std::ios::binary);
 	int polygon_count = 0,j=0;
 	stream.read((char *)&polygon_count,sizeof(int));
-	std::cout << "# of Polygons: " << polygon_count << std::endl;
 	double x_min=0,x_max=0,y_min=0,y_max=0,z_min=0,z_max=0;
 	
 	while(!stream.eof() && j < polygon_count)
@@ -18,7 +17,6 @@ S3DMesh::S3DMesh(const char *file)
 		{
 			stream.read((char *)coords,sizeof(double)*3);
 			vertices[i] = *(new S3DPoint(coords[0],coords[1],coords[2]));
-			std::cout << "Point (" << coords[0] << ", " << coords[1] << ", " << coords[2] << ") read." << std::endl;
 			
 			if(j == 0 && i == 0) //Init
 			{
@@ -40,15 +38,12 @@ S3DMesh::S3DMesh(const char *file)
 				if(coords[2] < z_min) 		z_min = coords[2];
 				else if(coords[2] > z_max) 	z_max = coords[2];
 			}
-			
-//			if(stream.eof()) break; //If file is broken, this might occur.
 		}
 		stream.read((char *)&color,sizeof(unsigned long));
 		unsigned char c_r = (color >> 16) & 0xFF;
 		unsigned char c_g = (color >> 8)  & 0xFF;
 		unsigned char c_b = color & 0xFF;
-		std::cout << "COLOR:" << (int)c_r << ", " << (int)c_g << ", " << (int)c_b << std::endl;
-		std::cout << "-----------------------------------" << std::endl;
+
 		S3DTriangle t(vertices);
 		t.setColor(color);
 		t.setFillMode(true);
@@ -65,7 +60,6 @@ void S3DMesh::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 {
 	for(int i=0;i<polygons.size();i++)
 	{
-//		polygons[i].setColor((255 << 16));
 		polygons[i].draw(disp,window,gc,zbuffer);
 	}
 }
@@ -84,9 +78,7 @@ void S3DMesh::move(double dx,double dy,double dz)
 	center.x += dx;
 	center.y += dy;
 	center.z += dz;
-	
-//	std::cout << "Center now at (" << center.x << ", " << center.y << ", " << center.z << ")" << std::endl;
-	
+
 	for(int i=0;i<polygons.size();i++)
 	{
 		polygons[i].move(dx,dy,dz);

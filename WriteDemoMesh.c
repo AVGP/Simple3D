@@ -49,20 +49,13 @@ int main(void)
 
 	unsigned long colors[6];
 	int i=0;
-	/*
-	for(i=0;i<6;i++)
-	{
-		colors[i] = RGB((rand()%128)*2,(rand()%128)*2,(rand()%128)*2);
-		printf("COLOR %i: %i %i %i\n",i,(colors[i]>>16)&0xff,(colors[i]>>8)&0xff,colors[i]&0xff);
-	}
-	*/
 	colors[0] = RGB(255,0,0);
 	colors[1] = RGB(0,255,0);
 	colors[2] = RGB(0,0,255);
 	colors[3] = RGB(255,255,0);
 	colors[4] = RGB(0,255,255);
 	colors[5] = RGB(255,255,255);
-	//Die Punkte so schreiben, dass sich die einzelnen Dreiecke der 12 nötigen Dreiecke ergeben :)
+	//Arranging the points, so that 12 triangles for a cube arise:
 	//1: 0,1,3
 	//2: 1,2,3
 	

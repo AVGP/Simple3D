@@ -2,7 +2,6 @@
 #define _S3D_LINE_H_
 
 #include <iostream>
-#include <cstdlib>
 #include "S3DPrimitive.h"
 #include "S3DPoint.h"
 
