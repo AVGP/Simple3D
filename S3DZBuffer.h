@@ -1,5 +1,8 @@
 #ifndef _S3D_ZBUFFER_H_
 #define _S3D_ZBUFFER_H_
+
+#include "global.h"
+
 class S3DZBuffer
 {
 	public:
