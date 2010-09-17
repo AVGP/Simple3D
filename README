@@ -38,6 +38,8 @@ S3DLine			The lowest primitive implemented. Here the actual (platform-dependent)
 				take advantage of this to render themselves.
 S3DTriangle		This is the primarily used primitive, as you can build everything
 				from these.
+S3DMesh			Allows you to load a collection of triangles from a file and use it
+				as an entity.
 types			Type-Aliases to keep datatypes platform-independent. Change these
 				if you're porting Simple3D.
 global			Global includes and some defines to supply stuff needed in most
@@ -45,3 +47,6 @@ global			Global includes and some defines to supply stuff needed in most
 main			Contains stuff to demonstrate the usage of Simple3D. It shows how
 				to create entities on the fly, setup the Simple3D-Engine and render
 				something on the screen.
+WriteTestMesh	Example program showing how to write meshes in S3D-format. The format
+				is pretty straightforward. You should be abled to figure it out by
+				looking how the program writes the file.
