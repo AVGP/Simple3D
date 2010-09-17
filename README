@@ -1,0 +1,47 @@
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+\/																			\/
+/\																			/\
+\/  Simple3D - a simple, object-oriented 3D-Engine for educational purpose  \/
+/\	 (c)2010 by Martin Naumann. Licenced under MIT-Licence. See COPYRIGHT   /\
+\/																			\/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+>>> Introduction: <<<
+O Hai! :)
+Welcome to Simple3D - my experimental, object-oriented and very,very,VERY simple 3D-Engine.
+My goal with Simple3D was to build a basic 3D-Engine.
+There are dozens and dozens of fully functional, feature-rich, object-oriented
+....and so on... 3D-Engines. Of course, yes.
+But I wanted to play around with my theoretical knowledge and use it to implement a
+fully-functional yet simple engine.
+It is a 100% fun project, so don't expect much from it. I work on this, when I've got
+nothing else to do and when I feel like hacking around a bit. ;)
+
+>>> Terms <<<
+Entity: 	A primitive or collection of primitives rendered together
+Primitive: 	The lowest primitive is S3DLine, representing a line.
+			Of course there is S3DPoint as a representation of a point in 3D,
+			but its only an auxiliary construct to help organizing the coordinate-
+			related stuff. Its not a real primitive.
+
+>>> Where is what? Code-Organization: <<<
+Simple3D		The core of the engine. Handles initialization, manages entities
+				and is responsible for rendering.
+S3DZBuffer		This part only holds the management-structure for z-buffering.
+				Most of the developers using Simple3D will only pass this around
+				only if you plan to implement own primitives without S3DLine,
+				you need to know, what it does.
+S3DPrimitive	Virtual superclass of all primitives. Defines, what ALL Primitives
+				need to implement.
+S3DLine			The lowest primitive implemented. Here the actual (platform-dependent)
+				drawing takes place, also used for filling. All superior primitives
+				take advantage of this to render themselves.
+S3DTriangle		This is the primarily used primitive, as you can build everything
+				from these.
+types			Type-Aliases to keep datatypes platform-independent. Change these
+				if you're porting Simple3D.
+global			Global includes and some defines to supply stuff needed in most
+				parts of the engine. Platform-dependent stuff sits here, too.
+main			Contains stuff to demonstrate the usage of Simple3D. It shows how
+				to create entities on the fly, setup the Simple3D-Engine and render
+				something on the screen.

@@ -1,0 +1,24 @@
+How to port this to other platforms
+===================================
+>>>Preface:<<<
+
+One of the primary design goals of this engine was,
+to keep it as portable as possible.
+This is allows to port it to any platform that is
+abled to draw points.
+Let it be any pc-platform, handheld or embedded
+devices - as long as it is abled to draw pixels,
+you can port to it and use Simple3D.
+
+>>>How?<<<
+Here is how you can port the library.
+
+Step 1: Change the global.h according to your system
+		I.e. change the X11-includes to whatever
+		suits your platform.
+Step 2: Adapt the types.h typedefs accordingly.
+Step 3: Change the setup and platform-dependent things
+		in Simple3D.cpp
+Step 4: Change the specific lines in S3DLine.cpp
+		to fit your system's requirements to draw points.
+And you're done! Easy, isn't it?
