@@ -10,9 +10,9 @@ class S3DZBuffer
 		  height = h;
 		  for(int i=0;i<w*h;i++) buffer[i] = 20000;
 	  };
-	  int getPoint(int x,int y) { return buffer[x+(y*width)]; };
-	  void setPoint(int x,int y,int z) { buffer[x+(y*width)] = z; };
-	  void clear() { for(int i=0;i<width*height;i++) buffer[i] = 20000; };
+	  int getPoint(int x,int y);
+	  void setPoint(int x,int y,int z);
+	  void clear();
 	private:
 	  int *buffer;
 	  int width,height;

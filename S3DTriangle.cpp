@@ -100,7 +100,10 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 	XSetForeground(disp,gc,color);
 	for(int i=0;i<3;i++)
 	{
-		//XDrawLine(disp,window,gc,PLANAR_DISTANCE*(vertices[i].x/(vertices[i].z/2.0)),PLANAR_DISTANCE*(vertices[i].y/(vertices[i].z/2.0)),PLANAR_DISTANCE*(vertices[(i+1)%3].x/(vertices[(i+1)%3].z/2.0)),PLANAR_DISTANCE*(vertices[(i+1)%3].y/(vertices[(i+1)%3].z/2.0)));
+		S3DLine l(S3DPoint(vertices[i].x,vertices[i].y,vertices[i].z),
+				  S3DPoint(vertices[(i+1)%3].x,vertices[(i+1)%3].y,vertices[(i+1)%3].z));
+		l.setColor(color);
+		l.draw(disp,window,gc,zbuffer);
 	}
 		
 	if(isFilled)
@@ -187,7 +190,14 @@ void S3DTriangle::draw(S3DDevice *disp, S3DSurface window, S3DContext gc,S3DZBuf
 					t_x = x;
 				}
 			}
-			if(intersects > 1) XDrawLine(disp,window,gc,l_x+f_x1,l_y+y,l_x+f_x2,l_y+y);
+			if(intersects > 1) //XDrawLine(disp,window,gc,l_x+f_x1,l_y+y,l_x+f_x2,l_y+y);
+			{
+				S3DLine l(S3DPoint(l_x+f_x1,l_y+y,-10),
+						  S3DPoint(l_x+f_x2,l_y+y,-10));
+				l.setColor(color);
+				l.setProjected(true);
+				l.draw(disp,window,gc,zbuffer);
+			}
 		}
 	}
 	delete[] boundary;

@@ -3,6 +3,7 @@
 
 #include "S3DPoint.h"
 #include "S3DPrimitive.h"
+#include "S3DLine.h"
 #include "S3DZBuffer.h"
 
 class S3DTriangle : public S3DPrimitive

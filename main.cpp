@@ -54,7 +54,7 @@ int main(int argc,char **argv)
 /*	w.setFillMode(false);
 	d.setFillMode(false);
 */
-	S3DLine l(S3DPoint(20,10,50),S3DPoint(30,10,50));
+	S3DLine l(S3DPoint(-30,0,20),S3DPoint(30,0,20));
 	l.setColor(RGB(255,0,0));
 
 //	r->appendEntity(&w);
@@ -70,7 +70,7 @@ int main(int argc,char **argv)
 		
 //	d.move(140,-30,0);
 	
-	S3DPoint *p = new S3DPoint(0,0,0);
+	S3DPoint *p = new S3DPoint(0,0,10);
 	
 	while(r->getEvent() != S3DEventButtonPress)
 	{
@@ -84,7 +84,7 @@ int main(int argc,char **argv)
 		v.rotate(0,5,0);
 //		w.rotate(5,5,5);
 		
-		l.rotate(0,0,5);
+		l.rotate(0,5,0,p);
 		
 		mesh.rotate(0,5,0);
 		//mesh.move(0,0,5);

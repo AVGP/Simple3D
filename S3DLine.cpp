@@ -4,6 +4,18 @@ S3DLine::S3DLine(S3DPoint a, S3DPoint b)
 {
 	ends[0] = a;
 	ends[1] = b;
+	projected = false;
+}
+
+void S3DLine::move(double dx,double dy,double dz)
+{
+	ends[0].x += dx;
+	ends[0].y += dy;
+	ends[0].z += dz;
+
+	ends[1].x += dx;
+	ends[1].y += dy;
+	ends[1].z += dz;
 }
 
 void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
@@ -80,24 +92,25 @@ void S3DLine::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 
 void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer)
 {
-/*
-	int x1 = ends[0].x;//(int)PLANAR_DISTANCE*(ends[0].x/(ends[0].z/2.0));
-	int x2 = ends[1].x;//(int)PLANAR_DISTANCE*(ends[1].x/(ends[1].z/2.0));
+	int x1,x2,y1,y2,z1,z2;
+	if(projected)
+	{
+		x1 = ends[0].x;//(int)PLANAR_DISTANCE*(ends[0].x/(ends[0].z/2.0));
+		x2 = ends[1].x;//(int)PLANAR_DISTANCE*(ends[1].x/(ends[1].z/2.0));
 
-	int y1 = ends[0].y;//(int)PLANAR_DISTANCE*(ends[0].y/(ends[0].z/2.0));
-	int y2 = ends[1].y;//(int)PLANAR_DISTANCE*(ends[1].y/(ends[1].z/2.0));
+		y1 = ends[0].y;//(int)PLANAR_DISTANCE*(ends[0].y/(ends[0].z/2.0));
+		y2 = ends[1].y;//(int)PLANAR_DISTANCE*(ends[1].y/(ends[1].z/2.0));
+	}
+	else
+	{
+		x1 = (int)PLANAR_DISTANCE*(ends[0].x/(ends[0].z/2.0));
+		x2 = (int)PLANAR_DISTANCE*(ends[1].x/(ends[1].z/2.0));
 
-	int z1 = ends[0].z;
-	int z2 = ends[1].z;
-*/
-	int x1 = (int)PLANAR_DISTANCE*(ends[0].x/(ends[0].z/2.0));
-	int x2 = (int)PLANAR_DISTANCE*(ends[1].x/(ends[1].z/2.0));
-
-	int y1 = (int)PLANAR_DISTANCE*(ends[0].y/(ends[0].z/2.0));
-	int y2 = (int)PLANAR_DISTANCE*(ends[1].y/(ends[1].z/2.0));
-
-	int z1 = ends[0].z;
-	int z2 = ends[1].z;
+		y1 = (int)PLANAR_DISTANCE*(ends[0].y/(ends[0].z/2.0));
+		y2 = (int)PLANAR_DISTANCE*(ends[1].y/(ends[1].z/2.0));
+	}
+	z1 = ends[0].z;
+	z2 = ends[1].z;
 
 //ORIGINAL
 
@@ -106,11 +119,18 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 	int err = abs(dx/2);
 
 	XSetForeground(disp,gc,color);
-	if(zbuffer->getPoint(x1,y1) < (ends[0].z/2.0))
+	if(zbuffer->getPoint(x1,y1) > (ends[0].z/2.0))
+	{
 		XDrawPoint(disp,window,gc,x1,y1);
-	if(zbuffer->getPoint(x2,y2) < (ends[1].z/2.0))
+		zbuffer->setPoint(x1,y1,(ends[0].z/2.0));
+	}
+	if(zbuffer->getPoint(x2,y2) > (ends[1].z/2.0))
+	{
 		XDrawPoint(disp,window,gc,x2,y2);
+		zbuffer->setPoint(x2,y2,(ends[0].z/2.0));
+	}
 	int y = y1,x = x1;
+
 	if(abs(dx) > abs(dy) || dy == 0)
 	{
 		while(x != x2)
@@ -121,8 +141,11 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 				y += ((dy > 0) ? 1 : -1);
 				err += abs(dx);
 			}
-//			if(zbuffer->getPoint(x,y) < (ends[0].z/2.0))
+			if(zbuffer->getPoint(x,y) > (ends[0].z/2.0))
+			{
 				XDrawPoint(disp,window,gc,x,y);
+				zbuffer->setPoint(x,y,(ends[0].z/2.0));
+			}
 			x += ((dx > 0) ? 1 : -1);
 		}
 	}
@@ -136,7 +159,11 @@ void S3DLine::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 				x += ((dx > 0) ? 1 : -1);
 				err += abs(dy);
 			}
-			XDrawPoint(disp,window,gc,x,y);
+			if(zbuffer->getPoint(x,y) > (ends[0].z/2.0))
+			{
+				XDrawPoint(disp,window,gc,x,y);
+				zbuffer->setPoint(x,y,(ends[0].z/2.0));
+			}
 			y += ((dy > 0) ? 1 : -1);
 		}
 	}
