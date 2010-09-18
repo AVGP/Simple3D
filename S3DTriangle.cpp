@@ -64,16 +64,20 @@ void S3DTriangle::move(double dx,double dy,double dz)
 * @param[in] fx Scaling factor along the x-axis
 * @param[in] fy Scaling factor along the y-axis
 * @param[in] fz Scaling factor along the z-axis
+* @param[in] correction If the triangle is part of a collection of triangles, this needs to be false.
+*						This is used to keep the triangle in place, when its scaled. This is only
+*						needed, when the triangle is not connected to other triangles. Because in that
+*						case the correction has to be done in the superior entity itself. Default is
+*						true
 *
 * This method scales the triangle according to the given factors internall,
 * its also translated, to preserve its center's coordinates.
 * @todo Currently this works for stand-alone triangles, but not for triangles
 *		belonging to S3DMesh.
 */
-void S3DTriangle::scale(double fx,double fy,double fz)
+void S3DTriangle::scale(double fx,double fy,double fz,bool correction)
 {
 	double o_c[3], n_c[3]; //Saves data about center-point before and after scaling.
-	double k_x = 0,k_y = 0,k_z = 0;
 
 	o_c[0] = (vertices[0].x + vertices[1].x + vertices[2].x)/3.0;
 	o_c[1] = (vertices[0].y + vertices[1].y + vertices[2].y)/3.0;
@@ -90,7 +94,10 @@ void S3DTriangle::scale(double fx,double fy,double fz)
 	n_c[1] = (vertices[0].y + vertices[1].y + vertices[2].y)/3.0;
 	n_c[2] = (vertices[0].z + vertices[1].z + vertices[2].z)/3.0;
 
-	move(-(n_c[0]-o_c[0]),-(n_c[1]-o_c[1]),-(n_c[2]-o_c[2]));
+	if(correction == true)
+	{
+		move(-(n_c[0]-o_c[0]),-(n_c[1]-o_c[1]),-(n_c[2]-o_c[2]));
+	}
 }
 
 /**

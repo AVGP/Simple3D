@@ -41,8 +41,8 @@ int main(int argc,char **argv)
 */
 	//We're also capable of loading meshes from a file.
 	S3DMesh mesh("test.s3d");
-	mesh.move(-60,-60,0);
-	mesh.scale(2,2,2);
+	//mesh.move(-60,-60,0);
+	mesh.scale(4,4,4);
 			  
 	//Here we set the colors of the 3 triangles, we just created...
 	t.setColor(RGB(255,0,0));

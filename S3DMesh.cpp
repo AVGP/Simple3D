@@ -51,19 +51,17 @@ S3DMesh::S3DMesh(const char *file)
 		}
 		stream.read((char *)&color,sizeof(unsigned long));
 
-		unsigned char c_r = (color >> 16) & 0xFF;
-		unsigned char c_g = (color >> 8)  & 0xFF;
-		unsigned char c_b = color & 0xFF;
-
 		S3DTriangle t(vertices);
 		t.setColor(color);
 		t.setFillMode(true);
 		polygons.push_back(t);
 		j++;
 	}
+
 	center.x = x_min + ((x_max - x_min)/2.0);
 	center.y = y_min + ((y_max - y_min)/2.0);
 	center.z = z_min + ((z_max - z_min)/2.0);
+	
 	reorderTriangles();
 }
 
@@ -120,11 +118,52 @@ void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 */
 void S3DMesh::scale(double fx,double fy,double fz)
 {
-	int z_min = 0,z_max = 0;
+	//Variables for correcting the center-position, to preserve the center coordinates
+	double x_min=0,x_max=0,y_min=0,y_max=0,z_min=0,z_max=0;
+	
 	for(unsigned int i=0;i<polygons.size();i++)
 	{
-		polygons[i].scale(fx,fy,fz);
+		polygons[i].scale(fx,fy,fz,false);
+		
+		S3DPoint *p = polygons[i].getPoints();
+		for(int j=0;j<3;j++)
+		{
+			if(j == 0 && i == 0)
+			{
+				x_min = p[j].x;
+				x_max = p[j].x;
+				y_min = p[j].y;
+				y_max = p[j].y;
+				z_min = p[j].z;
+				z_max = p[j].z;
+			}
+			if(p[j].x < x_min) 			x_min = p[j].x;
+			else if(p[j].x > x_max) 	x_max = p[j].x;
+				
+			if(p[j].y < y_min)	 		y_min = p[j].y;
+			else if(p[j].y > y_max) 	y_max = p[j].y;
+				
+			if(p[j].z < z_min) 			z_min = p[j].z;
+			else if(p[j].z > z_max) 	z_max = p[j].z;
+		}
 	}
+	
+	double nc_x,nc_y,nc_z; //Coordinates of the center after scaling
+	nc_x = x_min + ((x_max - x_min)/2.0);
+	nc_y = y_min + ((y_max - y_min)/2.0);
+	nc_z = z_min + ((z_max - z_min)/2.0);
+	
+	//Amount of correction needed for every axis
+	double dx = (center.x-nc_x),
+		   dy = (center.y-nc_y),
+		   dz = (center.z-nc_z);
+	//Updating the center, because the move()-call will modify it accordingly.
+	center.x = nc_x;
+	center.y = nc_y;
+	center.z = nc_z;
+	//Correct the positioning, so the center is not moved :)
+	move(dx,dy,dz);
+
 }
 
 /**

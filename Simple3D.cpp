@@ -38,8 +38,6 @@ Simple3D::Simple3D(int width, int height,std::string title,int argc, char **argv
 
 	gc = XCreateGC(disp,window,0,0);
 
-	XColor color;
-
 	XSetForeground(disp,gc,foreColor);
 	XSetBackground(disp,gc,backColor);
 	
