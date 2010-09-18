@@ -11,14 +11,15 @@ int main(int argc,char **argv)
 	S3DTriangle t(S3DPoint (-50, 0, 150),
 				  S3DPoint (  0, 0,   0),
 				  S3DPoint ( 50, 0, 150));
-
-	S3DTriangle u(S3DPoint (-50, 50,100*3),
-				  S3DPoint (  0,-50,100*3),
-				  S3DPoint ( 50, 50,100*3));
+	t.scale(2,2,2);
+	S3DTriangle u(S3DPoint (-50,  0,150),
+				  S3DPoint (  0,  0,  0),
+				  S3DPoint ( 50,  0,150));
+	u.scale(1,1,2);
 				  
-	S3DTriangle v(S3DPoint (-50, 50,150*3),
-				  S3DPoint (  0,-50,150*3),
-				  S3DPoint ( 50, 50,150*3));
+	S3DTriangle v(S3DPoint (-50, 50,150),
+				  S3DPoint (  0,-50,150),
+				  S3DPoint ( 50, 50,150));
 /*
 	S3DRect w(S3DPoint( 50, 50,100),
 			  S3DPoint(150, 50,100),
@@ -42,6 +43,7 @@ int main(int argc,char **argv)
 	//We're also capable of loading meshes from a file.
 	S3DMesh mesh("test.s3d");
 	mesh.move(-60,-60,0);
+	mesh.scale(2,2,2);
 			  
 	//Here we set the colors of the 3 triangles, we just created...
 	t.setColor(RGB(255,0,0));
@@ -92,9 +94,10 @@ int main(int argc,char **argv)
 		d.rotate(5,5,5);
 		d.move(0,0,2);
 */
-		t.rotate(2,2,2,p);
-		u.rotate(0,0,5);
-		v.rotate(0,5,0);
+		t.rotate(2,2,2);
+		t.scale(0.9,0.9,0.9);
+		u.rotate(0,2,0);
+//		v.rotate(0,5,0);
 //		w.rotate(5,5,5);
 		
 		l.rotate(0,5,0,p);

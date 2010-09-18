@@ -61,6 +61,40 @@ void S3DTriangle::move(double dx,double dy,double dz)
 }
 
 /**
+* @brief Scales the triangle
+* @param[in] fx Scaling factor along the x-axis
+* @param[in] fy Scaling factor along the y-axis
+* @param[in] fz Scaling factor along the z-axis
+*
+* This method scales the triangle according to the given factors internall,
+* its also translated, to preserve its center's coordinates.
+* @todo Currently this works for stand-alone triangles, but not for triangles
+*		belonging to S3DMesh.
+*/
+void S3DTriangle::scale(double fx,double fy,double fz)
+{
+	double o_c[3], n_c[3]; //Saves data about center-point before and after scaling.
+	double k_x = 0,k_y = 0,k_z = 0;
+
+	o_c[0] = (vertices[0].x + vertices[1].x + vertices[2].x)/3.0;
+	o_c[1] = (vertices[0].y + vertices[1].y + vertices[2].y)/3.0;
+	o_c[2] = (vertices[0].z + vertices[1].z + vertices[2].z)/3.0;
+
+	for(int i=0;i<3;i++)
+	{
+		vertices[i].x *= fx;
+		vertices[i].y *= fy;
+		vertices[i].z *= fz;
+	}
+	
+	n_c[0] = (vertices[0].x + vertices[1].x + vertices[2].x)/3.0;
+	n_c[1] = (vertices[0].y + vertices[1].y + vertices[2].y)/3.0;
+	n_c[2] = (vertices[0].z + vertices[1].z + vertices[2].z)/3.0;
+
+	move(-(n_c[0]-o_c[0]),-(n_c[1]-o_c[1]),-(n_c[2]-o_c[2]));
+}
+
+/**
 * @brief Rotates the triangle around its center or another anchor point
 * @param[in] rx The angle the triangle should be rotated around the x-axis
 * @param[in] ry The angle the triangle should be rotated around the y-axis

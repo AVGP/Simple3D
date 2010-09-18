@@ -34,6 +34,26 @@ void S3DLine::move(double dx,double dy,double dz)
 }
 
 /**
+* @brief Scales the line
+* @param[in] fx Scaling factor along the x-axis
+* @param[in] fy Scaling factor along the y-axis
+* @param[in] fz Scaling factor along the z-axis
+*
+* This method scales the line according to the given factors and translates it,
+* to preserve its center's coordinates.
+*/
+void S3DLine::scale(double fx,double fy,double fz)
+{
+	for(int i=0;i<2;i++)
+	{
+		ends[i].x *= fx;
+		ends[i].y *= fy;
+		ends[i].z *= fz;
+	}
+	move(-(fx/2.0),-(fy/2.0),-(fz/2.0));
+}
+
+/**
 * @brief Rotates the line around its center or another anchor point
 * @param[in] rx The angle the line should be rotated around the x-axis
 * @param[in] ry The angle the line should be rotated around the y-axis

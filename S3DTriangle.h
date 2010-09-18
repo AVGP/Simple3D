@@ -29,6 +29,7 @@ class S3DTriangle : public S3DPrimitive
 	  
 	void move(double dx,double dy,double dz);
 	void rotate(double rx,double ry,double rz,S3DPoint *anchor=NULL);
+	void scale(double fx,double fy,double fz);
 	  
 	void draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer);
 	void setColor(unsigned long c);

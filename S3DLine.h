@@ -23,6 +23,7 @@ class S3DLine : public S3DPrimitive
 	S3DLine(S3DPoint a, S3DPoint b);
 	void draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer);
 	void move(double dx,double dy,double dz);
+	void scale(double fx,double fy,double fz);
 	void rotate(double rx,double ry,double rz,S3DPoint *anchor = NULL);
 	double getZ();
 	void setColor(unsigned long c);

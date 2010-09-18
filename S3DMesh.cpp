@@ -108,6 +108,25 @@ void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 }
 
 /**
+* @brief Scales the mesh
+* @param[in] fx Scaling factor along the x-axis
+* @param[in] fy Scaling factor along the y-axis
+* @param[in] fz Scaling factor along the z-axis
+*
+* This method scales the mesh according to the given factors.
+* Internal its also translated to preserve its center's coordinates.
+* @todo Fix this thing. Its fucked up yet.
+*/
+void S3DMesh::scale(double fx,double fy,double fz)
+{
+	int z_min = 0,z_max = 0;
+	for(int i=0;i<polygons.size();i++)
+	{
+		polygons[i].scale(fx,fy,fz);
+	}
+}
+
+/**
 * @brief Moves the mesh (translates it) relative to its coordinates
 * @param[in] dx The distance the mesh is moved in x-direction
 * @param[in] dy The distance the mesh is moved in y-direction

@@ -22,6 +22,7 @@ class S3DMesh : public S3DPrimitive
 	S3DMesh(const char *file);
 	void draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer);
 	void move(double dx,double dy,double dz);
+	void scale(double fx,double fy,double fz);
 	void rotate(double rx,double ry,double rz,S3DPoint *anchor = NULL);
 	double getZ();
   private:
