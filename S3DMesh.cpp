@@ -50,6 +50,7 @@ S3DMesh::S3DMesh(const char *file)
 			}
 		}
 		stream.read((char *)&color,sizeof(unsigned long));
+
 		unsigned char c_r = (color >> 16) & 0xFF;
 		unsigned char c_g = (color >> 8)  & 0xFF;
 		unsigned char c_b = color & 0xFF;
@@ -80,7 +81,7 @@ S3DMesh::S3DMesh(const char *file)
 */
 void S3DMesh::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *zbuffer)
 {
-	for(int i=0;i<polygons.size();i++)
+	for(unsigned int i=0;i<polygons.size();i++)
 	{
 		polygons[i].draw(disp,window,gc,zbuffer);
 	}
@@ -100,7 +101,7 @@ void S3DMesh::draw(S3DDevice *disp,S3DSurface window,S3DContext gc,S3DZBuffer *z
 */
 void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 {
-	for(int i=0;i<polygons.size();i++)
+	for(unsigned int i=0;i<polygons.size();i++)
 	{
 		polygons[i].rotate(rx,ry,rz,&center);
 	}
@@ -120,7 +121,7 @@ void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 void S3DMesh::scale(double fx,double fy,double fz)
 {
 	int z_min = 0,z_max = 0;
-	for(int i=0;i<polygons.size();i++)
+	for(unsigned int i=0;i<polygons.size();i++)
 	{
 		polygons[i].scale(fx,fy,fz);
 	}
@@ -138,7 +139,7 @@ void S3DMesh::move(double dx,double dy,double dz)
 	center.y += dy;
 	center.z += dz;
 
-	for(int i=0;i<polygons.size();i++)
+	for(unsigned int i=0;i<polygons.size();i++)
 	{
 		polygons[i].move(dx,dy,dz);
 	}
@@ -186,3 +187,4 @@ double S3DMesh::getZ()
 {
 	return center.z;
 };
+

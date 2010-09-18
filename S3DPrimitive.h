@@ -51,3 +51,4 @@ class S3DPrimitive
 		void setColor(unsigned long c);
 };
 #endif
+

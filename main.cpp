@@ -1,3 +1,4 @@
+/* Demo */
 #include "Simple3D.h"
 
 int main(int argc,char **argv)
@@ -110,5 +111,6 @@ int main(int argc,char **argv)
 	//Clean up by deleting the Simple3D-Instance.
 	delete r;
 	
-	return 0;
+	return EXIT_SUCCESS;
 }
+
