@@ -6,7 +6,6 @@
 
 #include <fstream>
 #include <vector>
-#include <iostream>
 
 #include "S3DTriangle.h"
 

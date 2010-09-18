@@ -2,7 +2,6 @@
 * @file S3DTriangle.cpp Contains the implementation of S3DTriangle.
 */
 #include "S3DTriangle.h"
-#include <iostream>
 
 /**
 * @brief Constructor for the triangle.

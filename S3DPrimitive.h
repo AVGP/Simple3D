@@ -4,8 +4,6 @@
 #ifndef _S3DPrimitive_
 #define _S3DPrimitive_
 
-#include <cmath>
-#include <iostream>
 #include <vector>
 #include "global.h"
 #include "S3DPoint.h"
