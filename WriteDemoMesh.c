@@ -3,12 +3,14 @@
 
 #define RGB(r,g,b) ((r << 16) | (g << 8) | b)
 
+//#pragma pack(1)
 typedef struct
 {
 	double x;
 	double y;
 	double z;
 } Point;
+//#pragma pack()
 
 int main(void)
 {
@@ -48,7 +50,7 @@ int main(void)
 	meshdata[7].z =  70;
 
 	unsigned long colors[6];
-	int i=0;
+
 	colors[0] = RGB(255,0,0);
 	colors[1] = RGB(0,255,0);
 	colors[2] = RGB(0,0,255);
@@ -141,5 +143,5 @@ int main(void)
 	fclose(file);
 	printf("Done. (%i)\n",sizeof(double));
 	
-	return 0;
+	return EXIT_SUCCESS;
 }

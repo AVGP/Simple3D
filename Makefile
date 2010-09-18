@@ -15,7 +15,7 @@ default: $(OBJS)
 	$(CXX) -o $(NAME) $(OBJS) $(LIBS)
 
 debug:
-	$(CXX) -g -o $(NAME) $(LIBS) $(SOURCES) $(CXXFLAGS) -D_Debug_
+	$(CXX) -g -o $(NAME) $(LIBS) $(SOURCES) $(CXXFLAGS) -D_DEBUG_
 
 demo:
 	$(CC) -o WriteDemoMesh WriteDemoMesh.c $(CFLAGS)

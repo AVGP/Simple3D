@@ -2,7 +2,6 @@
 * @file Simple3D.cpp Contains the implementation of S3D's core.
 */
 #include "Simple3D.h"
-#include <iostream>
 
 /**
 * @brief The default constructor. You need to call this to initialize the engine.
@@ -32,9 +31,6 @@ Simple3D::Simple3D(int width, int height,std::string title,int argc, char **argv
 	this->height = (unsigned int)height;
 	
 	window = XCreateSimpleWindow(disp,DefaultRootWindow(disp),0,0,width,height,0,backColor,0);
-	
-	if(options & S3DOptionDebug)
-	  std::cout << "Window: " << window << std::endl;
 	
 	XSetStandardProperties(disp,window,title.c_str(),title.c_str(),None,NULL,0,NULL);
 	XMapWindow(disp,window);

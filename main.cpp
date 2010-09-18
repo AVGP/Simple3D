@@ -1,6 +1,4 @@
-#define _Debug_
 #include "Simple3D.h"
-#include <iostream>
 
 int main(int argc,char **argv)
 {

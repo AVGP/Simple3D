@@ -5,7 +5,6 @@
 #ifndef _S3D_LINE_H_
 #define _S3D_LINE_H_
 
-#include <iostream>
 #include "S3DPrimitive.h"
 #include "S3DPoint.h"
 
