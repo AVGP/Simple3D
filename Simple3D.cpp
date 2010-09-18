@@ -1,5 +1,6 @@
 /**
-* @file Simple3D.cpp Contains the implementation of S3D's core.
+* @file Simple3D.cpp
+* @brief Contains the implementation of S3D's core.
 */
 #include "Simple3D.h"
 

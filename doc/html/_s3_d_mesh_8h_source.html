@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Simple3D: Simple3D/S3DMesh.h Source File</title>
+<title>Simple3D: S3DMesh.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,7 +18,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -41,31 +40,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
     </ul>
   </div>
-<h1>Simple3D/S3DMesh.h</h1><a href="_s3_d_mesh_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00004"></a>00004 <span class="preprocessor">#ifndef _S3D_MESH_H_</span>
-<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor">#define _S3D_MESH_H_</span>
-<a name="l00006"></a>00006 <span class="preprocessor"></span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;fstream&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_s3_d_triangle_8h.html">S3DTriangle.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00018"></a><a class="code" href="class_s3_d_mesh.html">00018</a> <span class="keyword">class </span><a class="code" href="class_s3_d_mesh.html" title="This class is used to load a collection of triangles to use it as an entity.">S3DMesh</a> : <span class="keyword">public</span> <a class="code" href="class_s3_d_primitive.html" title="This class is the base of all primitives in S3D.">S3DPrimitive</a>
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020   <span class="keyword">public</span>:
-<a name="l00021"></a>00021         <a class="code" href="class_s3_d_mesh.html#a810cf0f60312bc574e347d6248499258" title="Constructor for the Mesh, loads data from a file.">S3DMesh</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file);
-<a name="l00022"></a>00022         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#afc47824c491991604931f4ccb0520cd1" title="Draws the mesh.">draw</a>(S3DDevice *disp,S3DSurface window,S3DContext gc,<a class="code" href="class_s3_d_z_buffer.html" title="This class is responsible for z-buffering.">S3DZBuffer</a> *zbuffer);
-<a name="l00023"></a>00023         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#a15edf10bf8a749627f11235c618734f7" title="Moves the mesh (translates it) relative to its coordinates.">move</a>(<span class="keywordtype">double</span> dx,<span class="keywordtype">double</span> dy,<span class="keywordtype">double</span> dz);
-<a name="l00024"></a>00024         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#ad1de35530a123dbb515e37afc8ecc0e3" title="Scales the mesh.">scale</a>(<span class="keywordtype">double</span> fx,<span class="keywordtype">double</span> fy,<span class="keywordtype">double</span> fz);
-<a name="l00025"></a>00025         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#affff1ac3ef33b293a9ec9881a4e13993" title="Rotates the mesh around its center or another anchor point.">rotate</a>(<span class="keywordtype">double</span> rx,<span class="keywordtype">double</span> ry,<span class="keywordtype">double</span> rz,<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> *anchor = NULL);
-<a name="l00026"></a>00026         <span class="keywordtype">double</span> <a class="code" href="class_s3_d_mesh.html#aa11c4dd0ce01443c07afaabc0e206881" title="Returns the z-coordinate for the center of the mesh.">getZ</a>();
-<a name="l00027"></a>00027   <span class="keyword">private</span>:
-<a name="l00028"></a>00028         std::vector&lt;S3DTriangle&gt; polygons;
-<a name="l00029"></a>00029         <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> center;
-<a name="l00030"></a>00030         <span class="keywordtype">void</span> reorderTriangles();
-<a name="l00031"></a>00031 };
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="preprocessor">#endif</span>
+<h1>S3DMesh.h</h1><a href="_s3_d_mesh_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef _S3D_MESH_H_</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define _S3D_MESH_H_</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_s3_d_triangle_8h.html" title="Contains the definition for S3DTriangle.">S3DTriangle.h</a>&quot;</span>
+<a name="l00012"></a>00012 
+<a name="l00019"></a><a class="code" href="class_s3_d_mesh.html">00019</a> <span class="keyword">class </span><a class="code" href="class_s3_d_mesh.html" title="This class is used to load a collection of triangles to use it as an entity.">S3DMesh</a> : <span class="keyword">public</span> <a class="code" href="class_s3_d_primitive.html" title="This class is the base of all primitives in S3D.">S3DPrimitive</a>
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021   <span class="keyword">public</span>:
+<a name="l00022"></a>00022         <a class="code" href="class_s3_d_mesh.html#a810cf0f60312bc574e347d6248499258" title="Constructor for the Mesh, loads data from a file.">S3DMesh</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file);
+<a name="l00023"></a>00023         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#afc47824c491991604931f4ccb0520cd1" title="Draws the mesh.">draw</a>(S3DDevice *disp,S3DSurface window,S3DContext gc,<a class="code" href="class_s3_d_z_buffer.html" title="This class is responsible for z-buffering.">S3DZBuffer</a> *zbuffer);
+<a name="l00024"></a>00024         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#a15edf10bf8a749627f11235c618734f7" title="Moves the mesh (translates it) relative to its coordinates.">move</a>(<span class="keywordtype">double</span> dx,<span class="keywordtype">double</span> dy,<span class="keywordtype">double</span> dz);
+<a name="l00025"></a>00025         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#ad1de35530a123dbb515e37afc8ecc0e3" title="Scales the mesh.">scale</a>(<span class="keywordtype">double</span> fx,<span class="keywordtype">double</span> fy,<span class="keywordtype">double</span> fz);
+<a name="l00026"></a>00026         <span class="keywordtype">void</span> <a class="code" href="class_s3_d_mesh.html#affff1ac3ef33b293a9ec9881a4e13993" title="Rotates the mesh around its center or another anchor point.">rotate</a>(<span class="keywordtype">double</span> rx,<span class="keywordtype">double</span> ry,<span class="keywordtype">double</span> rz,<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> *anchor = NULL);
+<a name="l00027"></a>00027         <span class="keywordtype">double</span> <a class="code" href="class_s3_d_mesh.html#aa11c4dd0ce01443c07afaabc0e206881" title="Returns the z-coordinate for the center of the mesh.">getZ</a>();
+<a name="l00028"></a>00028   <span class="keyword">private</span>:
+<a name="l00029"></a>00029         std::vector&lt;S3DTriangle&gt; polygons;
+<a name="l00030"></a>00030         <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> center;
+<a name="l00031"></a>00031         <span class="keywordtype">void</span> reorderTriangles();
+<a name="l00032"></a>00032 };
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="preprocessor">#endif</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -81,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 18:13:42 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

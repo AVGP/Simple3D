@@ -18,7 +18,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -73,8 +72,8 @@ Inheritance diagram for S3DTriangle:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Moves the triangle (translates it) relative to its coordinates.  <a href="#a7f168122e4ed627fcb6489852a56982b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_triangle.html#a3e739f6c9c176e58cb734db7328cf039">rotate</a> (double rx, double ry, double rz, <a class="el" href="class_s3_d_point.html">S3DPoint</a> *anchor=NULL)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rotates the triangle around its center or another anchor point.  <a href="#a3e739f6c9c176e58cb734db7328cf039"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_triangle.html#a0808a047e513fb2322e3fc6465c7c011">scale</a> (double fx, double fy, double fz)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Scales the triangle.  <a href="#a0808a047e513fb2322e3fc6465c7c011"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_triangle.html#acad24a5cbc1ab7526df25383dd739f00">scale</a> (double fx, double fy, double fz, bool correction=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Scales the triangle.  <a href="#acad24a5cbc1ab7526df25383dd739f00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_triangle.html#acf6924908c89d6bbc5af23769243beaf">draw</a> (S3DDevice *disp, S3DSurface window, S3DContext gc, <a class="el" href="class_s3_d_z_buffer.html">S3DZBuffer</a> *zbuffer)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draws the triangle.  <a href="#acf6924908c89d6bbc5af23769243beaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_triangle.html#a2c60503c3bae194ec8247a0e2467c915">setColor</a> (unsigned long c)</td></tr>
@@ -377,7 +376,7 @@ Inheritance diagram for S3DTriangle:</div>
 
 </div>
 </div>
-<a class="anchor" id="a0808a047e513fb2322e3fc6465c7c011"></a><!-- doxytag: member="S3DTriangle::scale" ref="a0808a047e513fb2322e3fc6465c7c011" args="(double fx, double fy, double fz)" -->
+<a class="anchor" id="acad24a5cbc1ab7526df25383dd739f00"></a><!-- doxytag: member="S3DTriangle::scale" ref="acad24a5cbc1ab7526df25383dd739f00" args="(double fx, double fy, double fz, bool correction=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -397,7 +396,13 @@ Inheritance diagram for S3DTriangle:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>fz</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>fz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>correction</em> = <code>true</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -413,12 +418,12 @@ Inheritance diagram for S3DTriangle:</div>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fx</em>&nbsp;</td><td>Scaling factor along the x-axis </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fy</em>&nbsp;</td><td>Scaling factor along the y-axis </td></tr>
-    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fz</em>&nbsp;</td><td>Scaling factor along the z-axis</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fz</em>&nbsp;</td><td>Scaling factor along the z-axis </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>correction</em>&nbsp;</td><td>Should coordinate-correction take place? Default is true.</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method scales the triangle according to the given factors internall, its also translated, to preserve its center's coordinates. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Currently this works for stand-alone triangles, but not for triangles belonging to <a class="el" href="class_s3_d_mesh.html" title="This class is used to load a collection of triangles to use it as an entity.">S3DMesh</a>. </dd></dl>
+<p>This method scales the triangle according to the given factors internall, its also translated, to preserve its center's coordinates, when correction is set to true (default). </p>
 
 </div>
 </div>
@@ -451,8 +456,8 @@ Inheritance diagram for S3DTriangle:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Simple3D/<a class="el" href="_s3_d_triangle_8h_source.html">S3DTriangle.h</a></li>
-<li>Simple3D/<a class="el" href="_s3_d_triangle_8cpp.html">S3DTriangle.cpp</a></li>
+<li><a class="el" href="_s3_d_triangle_8h_source.html">S3DTriangle.h</a></li>
+<li><a class="el" href="_s3_d_triangle_8cpp.html">S3DTriangle.cpp</a></li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -469,7 +474,7 @@ Inheritance diagram for S3DTriangle:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 18:13:42 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

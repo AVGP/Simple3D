@@ -1,5 +1,6 @@
 /**
-* @file S3DPrimitive.h Contains the definition of S3DPrimitive
+* @file S3DPrimitive.h
+* @brief Contains the definition of S3DPrimitive
 */
 #ifndef _S3DPrimitive_
 #define _S3DPrimitive_

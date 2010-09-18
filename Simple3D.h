@@ -1,5 +1,6 @@
 /**
-* @file Simple3D.h Contains the engine's main class definitions.
+* @file Simple3D.h
+* @brief Contains the engine's main class definitions.
 */
 #ifndef _S3D_H_
 #define _S3D_H_

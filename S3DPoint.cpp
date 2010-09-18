@@ -1,5 +1,6 @@
 /**
-* @file S3DPoint.cpp Contains the implementation of S3DPoint
+* @file S3DPoint.cpp
+* @brief Contains the implementation of S3DPoint
 */
 #include "S3DPoint.h"
 

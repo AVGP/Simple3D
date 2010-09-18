@@ -1,5 +1,6 @@
 /**
-* @file S3DPrimitive.cpp Contains the code for S3DPrimitive.
+* @file S3DPrimitive.cpp
+* @brief Contains the code for S3DPrimitive.
 */
 #include "S3DPrimitive.h"
 

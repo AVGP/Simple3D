@@ -1,5 +1,6 @@
 /**
-* @file S3DMesh.h Contains declarations for S3DMesh
+* @file S3DMesh.h
+* @brief Contains declarations for S3DMesh
 */
 #ifndef _S3D_MESH_H_
 #define _S3D_MESH_H_

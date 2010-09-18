@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Simple3D: Simple3D/S3DPoint.h Source File</title>
+<title>Simple3D: S3DPoint.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,7 +18,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -41,26 +40,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
     </ul>
   </div>
-<h1>Simple3D/S3DPoint.h</h1><a href="_s3_d_point_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00004"></a>00004 <span class="preprocessor">#ifndef _S3D_POINT_H_</span>
-<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor">#define _S3D_POINT_H_</span>
-<a name="l00006"></a>00006 <span class="preprocessor"></span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="global_8h.html" title="Contains basic includes (including platform-dependent) and definitions for the whole...">global.h</a>&quot;</span>
-<a name="l00016"></a><a class="code" href="class_s3_d_point.html">00016</a> <span class="keyword">class </span><a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a>
-<a name="l00017"></a>00017 {
-<a name="l00018"></a>00018         <span class="keyword">public</span>:
-<a name="l00019"></a>00019                 <span class="keywordtype">double</span> x;
-<a name="l00020"></a>00020                 <span class="keywordtype">double</span> y;
-<a name="l00021"></a>00021                 <span class="keywordtype">double</span> z;
-<a name="l00022"></a>00022                 <a class="code" href="class_s3_d_point.html#adad5537c6692acccab628a6bc105d20e" title="Default constructor.">S3DPoint</a>();
-<a name="l00023"></a>00023                 <a class="code" href="class_s3_d_point.html#adad5537c6692acccab628a6bc105d20e" title="Default constructor.">S3DPoint</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> y,<span class="keywordtype">double</span> z);
-<a name="l00024"></a>00024                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_point.html#a18bbc742cbadc8d49d0600c3f80caf91" title="Moves the point (translates it) relative to its coordinates.">move</a>(<span class="keywordtype">double</span> dx,<span class="keywordtype">double</span> dy,<span class="keywordtype">double</span> dz);
-<a name="l00025"></a>00025                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_point.html#a59aee595c8ae9bfbb60915a09c06b0aa" title="Draws the point.">draw</a>(Display *d,Window w,GC g);
-<a name="l00026"></a>00026                 <span class="keywordtype">void</span> rotate(<span class="keywordtype">double</span> rx,<span class="keywordtype">double</span> ry,<span class="keywordtype">double</span> rz) {};
-<a name="l00027"></a>00027                 <span class="keywordtype">double</span> <a class="code" href="class_s3_d_point.html#a255a77e4ca340344be1b1bd6b6a3f418" title="Returns the z-coordinate for the point.">getZ</a>();
-<a name="l00028"></a>00028 };
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="preprocessor">#endif</span>
+<h1>S3DPoint.h</h1><a href="_s3_d_point_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef _S3D_POINT_H_</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define _S3D_POINT_H_</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="global_8h.html" title="Contains basic includes (including platform-dependent) and definitions for the whole...">global.h</a>&quot;</span>
+<a name="l00017"></a><a class="code" href="class_s3_d_point.html">00017</a> <span class="keyword">class </span><a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a>
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019         <span class="keyword">public</span>:
+<a name="l00020"></a>00020                 <span class="keywordtype">double</span> x;
+<a name="l00021"></a>00021                 <span class="keywordtype">double</span> y;
+<a name="l00022"></a>00022                 <span class="keywordtype">double</span> z;
+<a name="l00023"></a>00023                 <a class="code" href="class_s3_d_point.html#adad5537c6692acccab628a6bc105d20e" title="Default constructor.">S3DPoint</a>();
+<a name="l00024"></a>00024                 <a class="code" href="class_s3_d_point.html#adad5537c6692acccab628a6bc105d20e" title="Default constructor.">S3DPoint</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> y,<span class="keywordtype">double</span> z);
+<a name="l00025"></a>00025                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_point.html#a18bbc742cbadc8d49d0600c3f80caf91" title="Moves the point (translates it) relative to its coordinates.">move</a>(<span class="keywordtype">double</span> dx,<span class="keywordtype">double</span> dy,<span class="keywordtype">double</span> dz);
+<a name="l00026"></a>00026                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_point.html#a59aee595c8ae9bfbb60915a09c06b0aa" title="Draws the point.">draw</a>(Display *d,Window w,GC g);
+<a name="l00027"></a>00027                 <span class="keywordtype">void</span> rotate(<span class="keywordtype">double</span> rx,<span class="keywordtype">double</span> ry,<span class="keywordtype">double</span> rz) {};
+<a name="l00028"></a>00028                 <span class="keywordtype">double</span> <a class="code" href="class_s3_d_point.html#a255a77e4ca340344be1b1bd6b6a3f418" title="Returns the z-coordinate for the point.">getZ</a>();
+<a name="l00029"></a>00029 };
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="preprocessor">#endif</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -76,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 18:13:42 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

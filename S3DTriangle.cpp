@@ -1,5 +1,6 @@
 /**
-* @file S3DTriangle.cpp Contains the implementation of S3DTriangle.
+* @file S3DTriangle.cpp
+* @brief Contains the implementation of S3DTriangle.
 */
 #include "S3DTriangle.h"
 
@@ -64,16 +65,11 @@ void S3DTriangle::move(double dx,double dy,double dz)
 * @param[in] fx Scaling factor along the x-axis
 * @param[in] fy Scaling factor along the y-axis
 * @param[in] fz Scaling factor along the z-axis
-* @param[in] correction If the triangle is part of a collection of triangles, this needs to be false.
-*						This is used to keep the triangle in place, when its scaled. This is only
-*						needed, when the triangle is not connected to other triangles. Because in that
-*						case the correction has to be done in the superior entity itself. Default is
-*						true
+* @param[in] correction Should coordinate-correction take place? Default is true.
 *
 * This method scales the triangle according to the given factors internall,
-* its also translated, to preserve its center's coordinates.
-* @todo Currently this works for stand-alone triangles, but not for triangles
-*		belonging to S3DMesh.
+* its also translated, to preserve its center's coordinates, when correction is
+* set to true (default).
 */
 void S3DTriangle::scale(double fx,double fy,double fz,bool correction)
 {

@@ -1,5 +1,6 @@
 /**
-* @file S3DTriangle.h Contains the definition for S3DTriangle.
+* @file S3DTriangle.h
+* @brief Contains the definition for S3DTriangle.
 */
 #ifndef _S3D_TRIANGLE_H_
 #define _S3D_TRIANGLE_H_

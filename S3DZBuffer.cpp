@@ -1,5 +1,6 @@
 /**
-* @file S3DZBuffer.h Contains implementation of the S3DZBuffer
+* @file S3DZBuffer.h
+* @brief Contains implementation of the S3DZBuffer
 */
 #include "S3DZBuffer.h"
 

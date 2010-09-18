@@ -1,5 +1,6 @@
 /**
-* @file S3DPoint.h Contains definitions of S3DPoint.
+* @file S3DPoint.h
+* @brief Contains definitions of S3DPoint.
 */
 #ifndef _S3D_POINT_H_
 #define _S3D_POINT_H_

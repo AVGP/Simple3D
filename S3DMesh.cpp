@@ -1,5 +1,6 @@
 /**
-* @file S3DMesh.cpp Contains the code for loading an entity from a file and use it. 
+* @file S3DMesh.cpp
+* @brief Contains the code for loading an entity from a file and use it. 
 */
 #include "S3DMesh.h"
 
@@ -114,7 +115,6 @@ void S3DMesh::rotate(double rx,double ry,double rz,S3DPoint *anchor)
 *
 * This method scales the mesh according to the given factors.
 * Internal its also translated to preserve its center's coordinates.
-* @todo Fix this thing. Its fucked up yet.
 */
 void S3DMesh::scale(double fx,double fy,double fz)
 {

@@ -38,144 +38,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
-      <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
 </div>
 <div class="contents">
 <h1>types.h File Reference</h1>
+<p>Defines basic types and structures of <a class="el" href="class_simple3_d.html" title="This class is the main class of the engine.">Simple3D</a>.  
+<a href="#_details">More...</a></p>
+
 <p><a href="types_8h_source.html">Go to the source code of this file.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s3_d_color.html">S3DColor</a></td></tr>
 <tr><td colspan="2"><h2>Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Display&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef GC&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Window&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Pixmap&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a7c712170c685845ecda3003378b69818">S3DBitmap</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25c0773a29204332721bde1b164d0b84"></a><!-- doxytag: member="types.h::S3DDevice" ref="a25c0773a29204332721bde1b164d0b84" args="" -->
+typedef Display&nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DDevice</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46f30693e0040340e595d8228cc31779"></a><!-- doxytag: member="types.h::S3DContext" ref="a46f30693e0040340e595d8228cc31779" args="" -->
+typedef GC&nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DContext</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4afc89c514af26434688c7e8b382ba5e"></a><!-- doxytag: member="types.h::S3DSurface" ref="a4afc89c514af26434688c7e8b382ba5e" args="" -->
+typedef Window&nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DSurface</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c712170c685845ecda3003378b69818"></a><!-- doxytag: member="types.h::S3DBitmap" ref="a7c712170c685845ecda3003378b69818" args="" -->
+typedef Pixmap&nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DBitmap</b></td></tr>
 <tr><td colspan="2"><h2>Enumerations</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07ee">S3DEvent</a> { <br/>
-&nbsp;&nbsp;<a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07eeacd56cbd63dbec00e15fea48e9ddc0c25">S3DEventNotify</a>, 
-<a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07eeaca578b0cd74d3386bee549d9615605e6">S3DEventKeyPress</a>, 
-<a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07eead1d946c9ef34020ee60e881d1930d210">S3DEventButtonPress</a>, 
-<a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07eea36a6912c7dec26672db6c21c5fe7daf4">S3DEventQuit</a>, 
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DEvent</b> { <br/>
+&nbsp;&nbsp;<b>S3DEventNotify</b>, 
+<b>S3DEventKeyPress</b>, 
+<b>S3DEventButtonPress</b>, 
+<b>S3DEventQuit</b>, 
 <br/>
-&nbsp;&nbsp;<a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07eeacde9619af5e8a03006c495bb004a7b3b">S3DEventNone</a>
+&nbsp;&nbsp;<b>S3DEventNone</b>
 <br/>
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ab834f8a43fc8e04bab48db0566716b5a">S3DOption</a> { <a class="el" href="types_8h.html#ab834f8a43fc8e04bab48db0566716b5aaf12808d22096860e4317d1ecd7c40be3">S3DOptionDrawAxis</a> =  0x1, 
-<a class="el" href="types_8h.html#ab834f8a43fc8e04bab48db0566716b5aad9903b26f8245e4656d93edd87239255">S3DOptionDebug</a> =  0x2
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DOption</b> { <b>S3DOptionDrawAxis</b> =  0x1, 
+<b>S3DOptionDebug</b> =  0x2
  }</td></tr>
 </table>
-<hr/><h2>Typedef Documentation</h2>
-<a class="anchor" id="a7c712170c685845ecda3003378b69818"></a><!-- doxytag: member="types.h::S3DBitmap" ref="a7c712170c685845ecda3003378b69818" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Pixmap <a class="el" href="types_8h.html#a7c712170c685845ecda3003378b69818">S3DBitmap</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a46f30693e0040340e595d8228cc31779"></a><!-- doxytag: member="types.h::S3DContext" ref="a46f30693e0040340e595d8228cc31779" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef GC <a class="el" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a25c0773a29204332721bde1b164d0b84"></a><!-- doxytag: member="types.h::S3DDevice" ref="a25c0773a29204332721bde1b164d0b84" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Display <a class="el" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4afc89c514af26434688c7e8b382ba5e"></a><!-- doxytag: member="types.h::S3DSurface" ref="a4afc89c514af26434688c7e8b382ba5e" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Window <a class="el" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<hr/><h2>Enumeration Type Documentation</h2>
-<a class="anchor" id="aaff2e5237961055f6df00adbc5cf07ee"></a><!-- doxytag: member="types.h::S3DEvent" ref="aaff2e5237961055f6df00adbc5cf07ee" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="types_8h.html#aaff2e5237961055f6df00adbc5cf07ee">S3DEvent</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="aaff2e5237961055f6df00adbc5cf07eeacd56cbd63dbec00e15fea48e9ddc0c25"></a><!-- doxytag: member="S3DEventNotify" ref="aaff2e5237961055f6df00adbc5cf07eeacd56cbd63dbec00e15fea48e9ddc0c25" args="" -->S3DEventNotify</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="aaff2e5237961055f6df00adbc5cf07eeaca578b0cd74d3386bee549d9615605e6"></a><!-- doxytag: member="S3DEventKeyPress" ref="aaff2e5237961055f6df00adbc5cf07eeaca578b0cd74d3386bee549d9615605e6" args="" -->S3DEventKeyPress</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="aaff2e5237961055f6df00adbc5cf07eead1d946c9ef34020ee60e881d1930d210"></a><!-- doxytag: member="S3DEventButtonPress" ref="aaff2e5237961055f6df00adbc5cf07eead1d946c9ef34020ee60e881d1930d210" args="" -->S3DEventButtonPress</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="aaff2e5237961055f6df00adbc5cf07eea36a6912c7dec26672db6c21c5fe7daf4"></a><!-- doxytag: member="S3DEventQuit" ref="aaff2e5237961055f6df00adbc5cf07eea36a6912c7dec26672db6c21c5fe7daf4" args="" -->S3DEventQuit</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="aaff2e5237961055f6df00adbc5cf07eeacde9619af5e8a03006c495bb004a7b3b"></a><!-- doxytag: member="S3DEventNone" ref="aaff2e5237961055f6df00adbc5cf07eeacde9619af5e8a03006c495bb004a7b3b" args="" -->S3DEventNone</em>&nbsp;</td><td>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ab834f8a43fc8e04bab48db0566716b5a"></a><!-- doxytag: member="types.h::S3DOption" ref="ab834f8a43fc8e04bab48db0566716b5a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="types_8h.html#ab834f8a43fc8e04bab48db0566716b5a">S3DOption</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="ab834f8a43fc8e04bab48db0566716b5aaf12808d22096860e4317d1ecd7c40be3"></a><!-- doxytag: member="S3DOptionDrawAxis" ref="ab834f8a43fc8e04bab48db0566716b5aaf12808d22096860e4317d1ecd7c40be3" args="" -->S3DOptionDrawAxis</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ab834f8a43fc8e04bab48db0566716b5aad9903b26f8245e4656d93edd87239255"></a><!-- doxytag: member="S3DOptionDebug" ref="ab834f8a43fc8e04bab48db0566716b5aad9903b26f8245e4656d93edd87239255" args="" -->S3DOptionDebug</em>&nbsp;</td><td>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-</div>
-</div>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>Defines basic types and structures of <a class="el" href="class_simple3_d.html" title="This class is the main class of the engine.">Simple3D</a>. </p>
+<p>This file holds type definitions, enumerations and structures to keep the platform-dependent types the same for <a class="el" href="class_simple3_d.html" title="This class is the main class of the engine.">Simple3D</a>. </p>
 </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -184,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Sep 17 23:58:47 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 18:13:42 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

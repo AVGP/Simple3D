@@ -1,5 +1,6 @@
 /**
-* @file S3DZBuffer.h Contains the definition of S3DZBuffer.
+* @file S3DZBuffer.h
+* @brief Contains the definition of S3DZBuffer.
 */
 #ifndef _S3D_ZBUFFER_H_
 #define _S3D_ZBUFFER_H_

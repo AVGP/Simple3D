@@ -28,7 +28,7 @@ void \hyperlink{class_s3_d_triangle_a7f168122e4ed627fcb6489852a56982b}{move} (do
 \begin{DoxyCompactList}\small\item\em Moves the triangle (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_triangle_a3e739f6c9c176e58cb734db7328cf039}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)
 \begin{DoxyCompactList}\small\item\em Rotates the triangle around its center or another anchor point. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_s3_d_triangle_a0808a047e513fb2322e3fc6465c7c011}{scale} (double fx, double fy, double fz)
+void \hyperlink{class_s3_d_triangle_acad24a5cbc1ab7526df25383dd739f00}{scale} (double fx, double fy, double fz, bool correction=true)
 \begin{DoxyCompactList}\small\item\em Scales the triangle. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{draw} (S3DDevice $\ast$disp, S3DSurface window, S3DContext gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
 \begin{DoxyCompactList}\small\item\em Draws the triangle. \item\end{DoxyCompactList}\item 
@@ -162,21 +162,19 @@ This function allows to rotate the triangle around all three axis in any angle. 
 
 Implements \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{S3DPrimitive}.
 
-\hypertarget{class_s3_d_triangle_a0808a047e513fb2322e3fc6465c7c011}{
+\hypertarget{class_s3_d_triangle_acad24a5cbc1ab7526df25383dd739f00}{
 \index{S3DTriangle@{S3DTriangle}!scale@{scale}}
 \index{scale@{scale}!S3DTriangle@{S3DTriangle}}
-\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::scale (double {\em fx}, \/  double {\em fy}, \/  double {\em fz})}}
-\label{class_s3_d_triangle_a0808a047e513fb2322e3fc6465c7c011}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::scale (double {\em fx}, \/  double {\em fy}, \/  double {\em fz}, \/  bool {\em correction} = {\ttfamily true})}}
+\label{class_s3_d_triangle_acad24a5cbc1ab7526df25383dd739f00}
 
 
 Scales the triangle. 
 
 
 \begin{DoxyParams}{Parameters}
-\item[\mbox{$\leftarrow$} {\em fx}]Scaling factor along the x-\/axis \item[\mbox{$\leftarrow$} {\em fy}]Scaling factor along the y-\/axis \item[\mbox{$\leftarrow$} {\em fz}]Scaling factor along the z-\/axis\end{DoxyParams}
-This method scales the triangle according to the given factors internall, its also translated, to preserve its center's coordinates. \begin{Desc}
-\item[\hyperlink{todo__todo000002}{Todo}]Currently this works for stand-\/alone triangles, but not for triangles belonging to \hyperlink{class_s3_d_mesh}{S3DMesh}. \end{Desc}
-\hypertarget{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}{
+\item[\mbox{$\leftarrow$} {\em fx}]Scaling factor along the x-\/axis \item[\mbox{$\leftarrow$} {\em fy}]Scaling factor along the y-\/axis \item[\mbox{$\leftarrow$} {\em fz}]Scaling factor along the z-\/axis \item[\mbox{$\leftarrow$} {\em correction}]Should coordinate-\/correction take place? Default is true.\end{DoxyParams}
+This method scales the triangle according to the given factors internall, its also translated, to preserve its center's coordinates, when correction is set to true (default). \hypertarget{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}{
 \index{S3DTriangle@{S3DTriangle}!setColor@{setColor}}
 \index{setColor@{setColor}!S3DTriangle@{S3DTriangle}}
 \subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::setColor (unsigned long {\em c})}}
@@ -196,5 +194,5 @@ Reimplemented from \hyperlink{class_s3_d_primitive_a1c8f036193987522bdfb6a49b9b7
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-Simple3D/\hyperlink{_s3_d_triangle_8h}{S3DTriangle.h}\item 
-Simple3D/\hyperlink{_s3_d_triangle_8cpp}{S3DTriangle.cpp}\end{DoxyCompactItemize}
+\hyperlink{_s3_d_triangle_8h}{S3DTriangle.h}\item 
+\hyperlink{_s3_d_triangle_8cpp}{S3DTriangle.cpp}\end{DoxyCompactItemize}

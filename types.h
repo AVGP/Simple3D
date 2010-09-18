@@ -1,5 +1,9 @@
 /**
-* types.h - defines basic types and structures of Simple3D
+* @file types.h 
+* @brief Defines basic types and structures of Simple3D
+* 
+* This file holds type definitions, enumerations and structures to keep the platform-dependent types
+* the same for Simple3D. 
 */
 
 #ifndef _S3D_TYPES_H_
