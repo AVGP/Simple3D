@@ -28,7 +28,9 @@ void \hyperlink{class_s3_d_triangle_a7f168122e4ed627fcb6489852a56982b}{move} (do
 \begin{DoxyCompactList}\small\item\em Moves the triangle (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_triangle_a3e739f6c9c176e58cb734db7328cf039}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)
 \begin{DoxyCompactList}\small\item\em Rotates the triangle around its center or another anchor point. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{draw} (\hyperlink{types_8h_a25c0773a29204332721bde1b164d0b84}{S3DDevice} $\ast$disp, \hyperlink{types_8h_a4afc89c514af26434688c7e8b382ba5e}{S3DSurface} window, \hyperlink{types_8h_a46f30693e0040340e595d8228cc31779}{S3DContext} gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
+void \hyperlink{class_s3_d_triangle_a0808a047e513fb2322e3fc6465c7c011}{scale} (double fx, double fy, double fz)
+\begin{DoxyCompactList}\small\item\em Scales the triangle. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{draw} (S3DDevice $\ast$disp, S3DSurface window, S3DContext gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
 \begin{DoxyCompactList}\small\item\em Draws the triangle. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}{setColor} (unsigned long c)
 \begin{DoxyCompactList}\small\item\em Sets the color the triangle is drawn in. \item\end{DoxyCompactList}\item 
@@ -74,7 +76,7 @@ Constructs a new instance of S3Triangle based upon the points supplied.
 \hypertarget{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{
 \index{S3DTriangle@{S3DTriangle}!draw@{draw}}
 \index{draw@{draw}!S3DTriangle@{S3DTriangle}}
-\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::draw ({\bf S3DDevice} $\ast$ {\em disp}, \/  {\bf S3DSurface} {\em window}, \/  {\bf S3DContext} {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::draw (S3DDevice $\ast$ {\em disp}, \/  S3DSurface {\em window}, \/  S3DContext {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
 \label{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}
 
 
@@ -160,6 +162,20 @@ This function allows to rotate the triangle around all three axis in any angle. 
 
 Implements \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{S3DPrimitive}.
 
+\hypertarget{class_s3_d_triangle_a0808a047e513fb2322e3fc6465c7c011}{
+\index{S3DTriangle@{S3DTriangle}!scale@{scale}}
+\index{scale@{scale}!S3DTriangle@{S3DTriangle}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}void S3DTriangle::scale (double {\em fx}, \/  double {\em fy}, \/  double {\em fz})}}
+\label{class_s3_d_triangle_a0808a047e513fb2322e3fc6465c7c011}
+
+
+Scales the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em fx}]Scaling factor along the x-\/axis \item[\mbox{$\leftarrow$} {\em fy}]Scaling factor along the y-\/axis \item[\mbox{$\leftarrow$} {\em fz}]Scaling factor along the z-\/axis\end{DoxyParams}
+This method scales the triangle according to the given factors internall, its also translated, to preserve its center's coordinates. \begin{Desc}
+\item[\hyperlink{todo__todo000002}{Todo}]Currently this works for stand-\/alone triangles, but not for triangles belonging to \hyperlink{class_s3_d_mesh}{S3DMesh}. \end{Desc}
 \hypertarget{class_s3_d_triangle_a2c60503c3bae194ec8247a0e2467c915}{
 \index{S3DTriangle@{S3DTriangle}!setColor@{setColor}}
 \index{setColor@{setColor}!S3DTriangle@{S3DTriangle}}
@@ -180,5 +196,5 @@ Reimplemented from \hyperlink{class_s3_d_primitive_a1c8f036193987522bdfb6a49b9b7
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_s3_d_triangle_8h}{S3DTriangle.h}\item 
-\hyperlink{_s3_d_triangle_8cpp}{S3DTriangle.cpp}\end{DoxyCompactItemize}
+Simple3D/\hyperlink{_s3_d_triangle_8h}{S3DTriangle.h}\item 
+Simple3D/\hyperlink{_s3_d_triangle_8cpp}{S3DTriangle.cpp}\end{DoxyCompactItemize}

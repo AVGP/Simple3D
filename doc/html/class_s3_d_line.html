@@ -18,6 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -66,10 +67,12 @@ Inheritance diagram for S3DLine:</div>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#ae6eeda40b82f27193b1d1165a8fb3e63">S3DLine</a> (<a class="el" href="class_s3_d_point.html">S3DPoint</a> a, <a class="el" href="class_s3_d_point.html">S3DPoint</a> b)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a line between two (3D-)Points.  <a href="#ae6eeda40b82f27193b1d1165a8fb3e63"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#aa7732c2d83fecb5d9934863d0e7875c1">draw</a> (<a class="el" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a> *disp, <a class="el" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a> window, <a class="el" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a> gc, <a class="el" href="class_s3_d_z_buffer.html">S3DZBuffer</a> *zbuffer)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#aa7732c2d83fecb5d9934863d0e7875c1">draw</a> (S3DDevice *disp, S3DSurface window, S3DContext gc, <a class="el" href="class_s3_d_z_buffer.html">S3DZBuffer</a> *zbuffer)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draws the line.  <a href="#aa7732c2d83fecb5d9934863d0e7875c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#a38203e499c32f14ff5da3b7c17861881">move</a> (double dx, double dy, double dz)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Moves the line (translates it) relative to its coordinates.  <a href="#a38203e499c32f14ff5da3b7c17861881"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#a49a646c9b24de7847eb45cac31dd3a27">scale</a> (double fx, double fy, double fz)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Scales the line.  <a href="#a49a646c9b24de7847eb45cac31dd3a27"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#a4d23495df2c8f45855d8b80d30b01d30">rotate</a> (double rx, double ry, double rz, <a class="el" href="class_s3_d_point.html">S3DPoint</a> *anchor=NULL)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rotates the line around its center or another anchor point.  <a href="#a4d23495df2c8f45855d8b80d30b01d30"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_line.html#a72aabdbb4d3d0c3ea36f5fda7b059f6a">getZ</a> ()</td></tr>
@@ -129,19 +132,19 @@ Inheritance diagram for S3DLine:</div>
         <tr>
           <td class="memname">void S3DLine::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a> *&nbsp;</td>
+          <td class="paramtype">S3DDevice *&nbsp;</td>
           <td class="paramname"> <em>disp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a>&nbsp;</td>
+          <td class="paramtype">S3DSurface&nbsp;</td>
           <td class="paramname"> <em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a>&nbsp;</td>
+          <td class="paramtype">S3DContext&nbsp;</td>
           <td class="paramname"> <em>gc</em>, </td>
         </tr>
         <tr>
@@ -317,6 +320,50 @@ Inheritance diagram for S3DLine:</div>
 
 </div>
 </div>
+<a class="anchor" id="a49a646c9b24de7847eb45cac31dd3a27"></a><!-- doxytag: member="S3DLine::scale" ref="a49a646c9b24de7847eb45cac31dd3a27" args="(double fx, double fy, double fz)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void S3DLine::scale </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>fx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>fy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>fz</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Scales the line. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fx</em>&nbsp;</td><td>Scaling factor along the x-axis </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fy</em>&nbsp;</td><td>Scaling factor along the y-axis </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fz</em>&nbsp;</td><td>Scaling factor along the z-axis</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method scales the line according to the given factors and translates it, to preserve its center's coordinates. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9feaf056477e858a7b0248a7b5cdd222"></a><!-- doxytag: member="S3DLine::setColor" ref="a9feaf056477e858a7b0248a7b5cdd222" args="(unsigned long c)" -->
 <div class="memitem">
 <div class="memproto">
@@ -373,8 +420,8 @@ Inheritance diagram for S3DLine:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_s3_d_line_8h_source.html">S3DLine.h</a></li>
-<li><a class="el" href="_s3_d_line_8cpp.html">S3DLine.cpp</a></li>
+<li>Simple3D/<a class="el" href="_s3_d_line_8h_source.html">S3DLine.h</a></li>
+<li>Simple3D/<a class="el" href="_s3_d_line_8cpp.html">S3DLine.cpp</a></li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -382,7 +429,7 @@ Inheritance diagram for S3DLine:</div>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -391,7 +438,7 @@ Inheritance diagram for S3DLine:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Sep 17 23:58:47 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

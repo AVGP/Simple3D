@@ -16,24 +16,36 @@ This class is used for representing 3d-\/coordinates.
 \item 
 \hyperlink{class_s3_d_point_adad5537c6692acccab628a6bc105d20e}{S3DPoint} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_s3_d_point_ab03f0683b11340e8071eb8cdde1811b3}{S3DPoint} (double \hyperlink{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{x}, double \hyperlink{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{y}, double \hyperlink{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{z})
+\hyperlink{class_s3_d_point_ab03f0683b11340e8071eb8cdde1811b3}{S3DPoint} (double x, double y, double z)
 \begin{DoxyCompactList}\small\item\em Mostly used constructor used for creating S3DPoints. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_point_a18bbc742cbadc8d49d0600c3f80caf91}{move} (double dx, double dy, double dz)
 \begin{DoxyCompactList}\small\item\em Moves the point (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_point_a59aee595c8ae9bfbb60915a09c06b0aa}{draw} (Display $\ast$d, Window w, GC g)
 \begin{DoxyCompactList}\small\item\em Draws the point. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}{rotate} (double rx, double ry, double rz)
+\hypertarget{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}{
+void {\bfseries rotate} (double rx, double ry, double rz)}
+\label{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}
+
 \item 
 double \hyperlink{class_s3_d_point_a255a77e4ca340344be1b1bd6b6a3f418}{getZ} ()
 \begin{DoxyCompactList}\small\item\em Returns the z-\/coordinate for the point. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-double \hyperlink{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{x}
+\hypertarget{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{
+double {\bfseries x}}
+\label{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}
+
 \item 
-double \hyperlink{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{y}
+\hypertarget{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{
+double {\bfseries y}}
+\label{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}
+
 \item 
-double \hyperlink{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{z}
+\hypertarget{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{
+double {\bfseries z}}
+\label{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}
+
 \end{DoxyCompactItemize}
 
 
@@ -98,32 +110,9 @@ Moves the point (translates it) relative to its coordinates.
 
 \begin{DoxyParams}{Parameters}
 \item[\mbox{$\leftarrow$} {\em dx}]The distance the point is moved in x-\/direction \item[\mbox{$\leftarrow$} {\em dy}]The distance the point is moved in y-\/direction \item[\mbox{$\leftarrow$} {\em dz}]The distance the point is moved in z-\/direction \end{DoxyParams}
-\hypertarget{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}{
-\index{S3DPoint@{S3DPoint}!rotate@{rotate}}
-\index{rotate@{rotate}!S3DPoint@{S3DPoint}}
-\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}void S3DPoint::rotate (double {\em rx}, \/  double {\em ry}, \/  double {\em rz})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_s3_d_point_a4d51ed60f8d2e7ee2edd060cfdef22d4}
-
-
-\subsection{Member Data Documentation}
-\hypertarget{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}{
-\index{S3DPoint@{S3DPoint}!x@{x}}
-\index{x@{x}!S3DPoint@{S3DPoint}}
-\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf S3DPoint::x}}}
-\label{class_s3_d_point_ae6b39611c603bd43ea67bcf4438a932a}
-\hypertarget{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}{
-\index{S3DPoint@{S3DPoint}!y@{y}}
-\index{y@{y}!S3DPoint@{S3DPoint}}
-\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf S3DPoint::y}}}
-\label{class_s3_d_point_a487ab6dfdcb00ddbf9485f0b71ad7fb5}
-\hypertarget{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}{
-\index{S3DPoint@{S3DPoint}!z@{z}}
-\index{z@{z}!S3DPoint@{S3DPoint}}
-\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf S3DPoint::z}}}
-\label{class_s3_d_point_ace7df3a87344170ddb4bfc92c3d5ec3d}
 
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_s3_d_point_8h}{S3DPoint.h}\item 
-\hyperlink{_s3_d_point_8cpp}{S3DPoint.cpp}\end{DoxyCompactItemize}
+Simple3D/\hyperlink{_s3_d_point_8h}{S3DPoint.h}\item 
+Simple3D/\hyperlink{_s3_d_point_8cpp}{S3DPoint.cpp}\end{DoxyCompactItemize}

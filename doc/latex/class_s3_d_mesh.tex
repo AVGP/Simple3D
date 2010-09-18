@@ -22,10 +22,12 @@ Inheritance diagram for S3DMesh:\begin{figure}[H]
 \item 
 \hyperlink{class_s3_d_mesh_a810cf0f60312bc574e347d6248499258}{S3DMesh} (const char $\ast$file)
 \begin{DoxyCompactList}\small\item\em Constructor for the Mesh, loads data from a file. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}{draw} (\hyperlink{types_8h_a25c0773a29204332721bde1b164d0b84}{S3DDevice} $\ast$disp, \hyperlink{types_8h_a4afc89c514af26434688c7e8b382ba5e}{S3DSurface} window, \hyperlink{types_8h_a46f30693e0040340e595d8228cc31779}{S3DContext} gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
+void \hyperlink{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}{draw} (S3DDevice $\ast$disp, S3DSurface window, S3DContext gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)
 \begin{DoxyCompactList}\small\item\em Draws the mesh. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_mesh_a15edf10bf8a749627f11235c618734f7}{move} (double dx, double dy, double dz)
 \begin{DoxyCompactList}\small\item\em Moves the mesh (translates it) relative to its coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s3_d_mesh_ad1de35530a123dbb515e37afc8ecc0e3}{scale} (double fx, double fy, double fz)
+\begin{DoxyCompactList}\small\item\em Scales the mesh. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_mesh_affff1ac3ef33b293a9ec9881a4e13993}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)
 \begin{DoxyCompactList}\small\item\em Rotates the mesh around its center or another anchor point. \item\end{DoxyCompactList}\item 
 double \hyperlink{class_s3_d_mesh_aa11c4dd0ce01443c07afaabc0e206881}{getZ} ()
@@ -54,7 +56,7 @@ Constructs a new instance of \hyperlink{class_s3_d_mesh}{S3DMesh} and loads data
 \hypertarget{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}{
 \index{S3DMesh@{S3DMesh}!draw@{draw}}
 \index{draw@{draw}!S3DMesh@{S3DMesh}}
-\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DMesh::draw ({\bf S3DDevice} $\ast$ {\em disp}, \/  {\bf S3DSurface} {\em window}, \/  {\bf S3DContext} {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void S3DMesh::draw (S3DDevice $\ast$ {\em disp}, \/  S3DSurface {\em window}, \/  S3DContext {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
 \label{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}
 
 
@@ -112,9 +114,23 @@ This function allows to rotate the mesh around all three axis in any angle. If n
 
 Implements \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{S3DPrimitive}.
 
+\hypertarget{class_s3_d_mesh_ad1de35530a123dbb515e37afc8ecc0e3}{
+\index{S3DMesh@{S3DMesh}!scale@{scale}}
+\index{scale@{scale}!S3DMesh@{S3DMesh}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}void S3DMesh::scale (double {\em fx}, \/  double {\em fy}, \/  double {\em fz})}}
+\label{class_s3_d_mesh_ad1de35530a123dbb515e37afc8ecc0e3}
+
+
+Scales the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em fx}]Scaling factor along the x-\/axis \item[\mbox{$\leftarrow$} {\em fy}]Scaling factor along the y-\/axis \item[\mbox{$\leftarrow$} {\em fz}]Scaling factor along the z-\/axis\end{DoxyParams}
+This method scales the mesh according to the given factors. Internal its also translated to preserve its center's coordinates. \begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]Fix this thing. Its fucked up yet. \end{Desc}
 
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_s3_d_mesh_8h}{S3DMesh.h}\item 
-\hyperlink{_s3_d_mesh_8cpp}{S3DMesh.cpp}\end{DoxyCompactItemize}
+Simple3D/\hyperlink{_s3_d_mesh_8h}{S3DMesh.h}\item 
+Simple3D/\hyperlink{_s3_d_mesh_8cpp}{S3DMesh.cpp}\end{DoxyCompactItemize}

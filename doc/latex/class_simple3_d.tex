@@ -16,7 +16,10 @@ This class is the main class of the engine.
 \item 
 \hyperlink{class_simple3_d_a7644ace43261dd71e7f3cb9c9659025d}{Simple3D} (int width, int height, std::string title, int argc=0, char $\ast$$\ast$argv=0)
 \begin{DoxyCompactList}\small\item\em The default constructor. You need to call this to initialize the engine. \item\end{DoxyCompactList}\item 
-\hyperlink{class_simple3_d_a859666c712fd07748e9fca5938bbfa55}{$\sim$Simple3D} ()
+\hypertarget{class_simple3_d_a859666c712fd07748e9fca5938bbfa55}{
+\hyperlink{class_simple3_d_a859666c712fd07748e9fca5938bbfa55}{$\sim$Simple3D} ()}
+\label{class_simple3_d_a859666c712fd07748e9fca5938bbfa55}
+
 \begin{DoxyCompactList}\small\item\em Destructor. Call this to clean up after you're ready with S3D. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_simple3_d_abe4d7beed767d1d24154738fad7ac1a7}{appendEntity} (\hyperlink{class_s3_d_primitive}{S3DPrimitive} $\ast$p)
 \begin{DoxyCompactList}\small\item\em Propagate entity to the engine. \item\end{DoxyCompactList}\item 
@@ -26,7 +29,7 @@ void \hyperlink{class_simple3_d_a2e1f61afda5ab9cb2a1abd05a856c5d7}{setBackColor}
 \begin{DoxyCompactList}\small\item\em Set the background color. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_simple3_d_a9dd0eb5a220c4490656dc3dd5cc79857}{setForeColor} (\hyperlink{struct_s3_d_color}{S3DColor} c)
 \begin{DoxyCompactList}\small\item\em Set the background color. \item\end{DoxyCompactList}\item 
-\hyperlink{types_8h_aaff2e5237961055f6df00adbc5cf07ee}{S3DEvent} \hyperlink{class_simple3_d_a8f6621e3e0b4bfae3011514e7fc73003}{getEvent} ()
+S3DEvent \hyperlink{class_simple3_d_a8f6621e3e0b4bfae3011514e7fc73003}{getEvent} ()
 \begin{DoxyCompactList}\small\item\em Obtain an event from the engine's window. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_simple3_d_aa0da52599eafb396ec36e3d0cf6da504}{reOrderEntities} ()
 \begin{DoxyCompactList}\small\item\em Reorders entities for correct rendering. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -48,15 +51,6 @@ The default constructor. You need to call this to initialize the engine.
 
 \begin{DoxyParams}{Parameters}
 \item[\mbox{$\leftarrow$} {\em width}]The width of the desired screen. \item[\mbox{$\leftarrow$} {\em height}]The height of the desired screen. \item[\mbox{$\leftarrow$} {\em title}]You can supply a title for a window here. \item[\mbox{$\leftarrow$} {\em argc}]The number of arguments passed to your application (optional) \item[\mbox{$\leftarrow$} {\em argv}]The arguments passed to your application (optional) \end{DoxyParams}
-\hypertarget{class_simple3_d_a859666c712fd07748e9fca5938bbfa55}{
-\index{Simple3D@{Simple3D}!$\sim$Simple3D@{$\sim$Simple3D}}
-\index{$\sim$Simple3D@{$\sim$Simple3D}!Simple3D@{Simple3D}}
-\subsubsection[{$\sim$Simple3D}]{\setlength{\rightskip}{0pt plus 5cm}Simple3D::$\sim$Simple3D ()}}
-\label{class_simple3_d_a859666c712fd07748e9fca5938bbfa55}
-
-
-Destructor. Call this to clean up after you're ready with S3D. 
-
 
 
 \subsection{Member Function Documentation}
@@ -75,7 +69,7 @@ Propagate entity to the engine.
 You need to call this function in order to get an entity on screen. Only entities enqueued through this function are rendered. \hypertarget{class_simple3_d_a8f6621e3e0b4bfae3011514e7fc73003}{
 \index{Simple3D@{Simple3D}!getEvent@{getEvent}}
 \index{getEvent@{getEvent}!Simple3D@{Simple3D}}
-\subsubsection[{getEvent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S3DEvent} Simple3D::getEvent ()}}
+\subsubsection[{getEvent}]{\setlength{\rightskip}{0pt plus 5cm}S3DEvent Simple3D::getEvent ()}}
 \label{class_simple3_d_a8f6621e3e0b4bfae3011514e7fc73003}
 
 
@@ -130,5 +124,5 @@ Call this to set the color used by the engine for rendering, when no other color
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_simple3_d_8h}{Simple3D.h}\item 
-\hyperlink{_simple3_d_8cpp}{Simple3D.cpp}\end{DoxyCompactItemize}
+Simple3D/\hyperlink{_simple3_d_8h}{Simple3D.h}\item 
+Simple3D/\hyperlink{_simple3_d_8cpp}{Simple3D.cpp}\end{DoxyCompactItemize}

@@ -20,38 +20,68 @@ Inheritance diagram for S3DPrimitive:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \hyperlink{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{draw} (\hyperlink{types_8h_a25c0773a29204332721bde1b164d0b84}{S3DDevice} $\ast$disp, \hyperlink{types_8h_a4afc89c514af26434688c7e8b382ba5e}{S3DSurface} window, \hyperlink{types_8h_a46f30693e0040340e595d8228cc31779}{S3DContext} gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)=0
+\hypertarget{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{
+virtual void \hyperlink{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{draw} (S3DDevice $\ast$disp, S3DSurface window, S3DContext gc, \hyperlink{class_s3_d_z_buffer}{S3DZBuffer} $\ast$zbuffer)=0}
+\label{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}
+
 \begin{DoxyCompactList}\small\item\em Virtual method. Implementations are responsible for drawing the primitive. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)=0
+\hypertarget{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{
+virtual void \hyperlink{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{rotate} (double rx, double ry, double rz, \hyperlink{class_s3_d_point}{S3DPoint} $\ast$anchor=NULL)=0}
+\label{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}
+
 \begin{DoxyCompactList}\small\item\em Virtual method. Implementations are responsible for rotating the primitive. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{move} (double dx, double dy, double dz)=0
+\hypertarget{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{
+virtual void \hyperlink{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{move} (double dx, double dy, double dz)=0}
+\label{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}
+
 \begin{DoxyCompactList}\small\item\em Virtual method. Implementations are responsible for moving the primitive. \item\end{DoxyCompactList}\item 
-virtual double \hyperlink{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{getZ} ()=0
+\hypertarget{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{
+virtual double \hyperlink{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{getZ} ()=0}
+\label{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}
+
 \begin{DoxyCompactList}\small\item\em Virtual method. Implementations are responsible for return some z-\/Value the primitive. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_s3_d_primitive_a36948fee7526b4c0634d16372ebb3e56}{getFillMode} ()
+\hypertarget{class_s3_d_primitive_a36948fee7526b4c0634d16372ebb3e56}{
+bool \hyperlink{class_s3_d_primitive_a36948fee7526b4c0634d16372ebb3e56}{getFillMode} ()}
+\label{class_s3_d_primitive_a36948fee7526b4c0634d16372ebb3e56}
+
 \begin{DoxyCompactList}\small\item\em Returns if the primitive is filled or just wireframe. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_primitive_afd54077b1dbe256b9c6dfe67da7b0a0b}{setFillMode} (bool fill)
 \begin{DoxyCompactList}\small\item\em Used to influence, if the primitive is filled or just wireframe. \item\end{DoxyCompactList}\item 
-unsigned long \hyperlink{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}{getColor} ()
+\hypertarget{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}{
+unsigned long \hyperlink{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}{getColor} ()}
+\label{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}
+
 \begin{DoxyCompactList}\small\item\em Returns the color of the primitive. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_s3_d_primitive_a1c8f036193987522bdfb6a49b9b74000}{setColor} (unsigned long c)
 \begin{DoxyCompactList}\small\item\em Sets the color of the primitive. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \hyperlink{class_s3_d_primitive_ae8ff735495c481dbbd0c99ffe16d954f}{id}
+\hypertarget{class_s3_d_primitive_ae8ff735495c481dbbd0c99ffe16d954f}{
+unsigned int {\bfseries id}}
+\label{class_s3_d_primitive_ae8ff735495c481dbbd0c99ffe16d954f}
+
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static unsigned int \hyperlink{class_s3_d_primitive_a08ee26517002051f19202d8b62bf2b46}{id\_\-max} = 1
+\hypertarget{class_s3_d_primitive_a08ee26517002051f19202d8b62bf2b46}{
+static unsigned int {\bfseries id\_\-max} = 1}
+\label{class_s3_d_primitive_a08ee26517002051f19202d8b62bf2b46}
+
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{class_s3_d_primitive_ae5b091719cc1afa825a4ba0e1dfce670}{isFilled}
+\hypertarget{class_s3_d_primitive_ae5b091719cc1afa825a4ba0e1dfce670}{
+bool {\bfseries isFilled}}
+\label{class_s3_d_primitive_ae5b091719cc1afa825a4ba0e1dfce670}
+
 \item 
-unsigned long \hyperlink{class_s3_d_primitive_afc81699d5253aab2757a2c5e33848a22}{color}
+\hypertarget{class_s3_d_primitive_afc81699d5253aab2757a2c5e33848a22}{
+unsigned long {\bfseries color}}
+\label{class_s3_d_primitive_afc81699d5253aab2757a2c5e33848a22}
+
 \end{DoxyCompactItemize}
 
 
@@ -59,80 +89,6 @@ unsigned long \hyperlink{class_s3_d_primitive_afc81699d5253aab2757a2c5e33848a22}
 This class is the base of all primitives in S3D. This class is the base-\/class for ALL primitives in S3D. It contains the virtual methods, derived primitives need to implement. Its the main interface for primitives. 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}{
-\index{S3DPrimitive@{S3DPrimitive}!draw@{draw}}
-\index{draw@{draw}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S3DPrimitive::draw ({\bf S3DDevice} $\ast$ {\em disp}, \/  {\bf S3DSurface} {\em window}, \/  {\bf S3DContext} {\em gc}, \/  {\bf S3DZBuffer} $\ast$ {\em zbuffer})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_s3_d_primitive_a857f042bc63ae6233b63b60089e92b81}
-
-
-Virtual method. Implementations are responsible for drawing the primitive. 
-
-
-
-Implemented in \hyperlink{class_s3_d_line_aa7732c2d83fecb5d9934863d0e7875c1}{S3DLine}, \hyperlink{class_s3_d_mesh_afc47824c491991604931f4ccb0520cd1}{S3DMesh}, and \hyperlink{class_s3_d_triangle_acf6924908c89d6bbc5af23769243beaf}{S3DTriangle}.
-
-\hypertarget{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}{
-\index{S3DPrimitive@{S3DPrimitive}!getColor@{getColor}}
-\index{getColor@{getColor}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long S3DPrimitive::getColor ()}}
-\label{class_s3_d_primitive_a4102845e7754e44c51a87c0fcb391c73}
-
-
-Returns the color of the primitive. 
-
-
-
-Reimplemented in \hyperlink{class_s3_d_cube_ab856b6fa4c1b72be7d2d7b79e26f3c38}{S3DCube}, \hyperlink{class_s3_d_line_a62b49873ae3356cf997ca1fd87a1b7de}{S3DLine}, \hyperlink{class_s3_d_rect_adbf17caac29e632afb9f380e3821a256}{S3DRect}, \hyperlink{class_s3_d_tetraeder_ab79d98573d008f21c9a77f9d3633d6ae}{S3DTetraeder}, and \hyperlink{class_s3_d_triangle_ade8ba96094206ee3dff5c3bc743e0a1c}{S3DTriangle}.
-
-\hypertarget{class_s3_d_primitive_a36948fee7526b4c0634d16372ebb3e56}{
-\index{S3DPrimitive@{S3DPrimitive}!getFillMode@{getFillMode}}
-\index{getFillMode@{getFillMode}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{getFillMode}]{\setlength{\rightskip}{0pt plus 5cm}bool S3DPrimitive::getFillMode ()}}
-\label{class_s3_d_primitive_a36948fee7526b4c0634d16372ebb3e56}
-
-
-Returns if the primitive is filled or just wireframe. 
-
-\hypertarget{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}{
-\index{S3DPrimitive@{S3DPrimitive}!getZ@{getZ}}
-\index{getZ@{getZ}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}virtual double S3DPrimitive::getZ ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_s3_d_primitive_ab5b06d3a8e83216cc42554bb78afd2d9}
-
-
-Virtual method. Implementations are responsible for return some z-\/Value the primitive. 
-
-
-
-Implemented in \hyperlink{class_s3_d_cube_a4ac1d080b330d6b69d24097f746ddd4c}{S3DCube}, \hyperlink{class_s3_d_line_a72aabdbb4d3d0c3ea36f5fda7b059f6a}{S3DLine}, \hyperlink{class_s3_d_mesh_aa11c4dd0ce01443c07afaabc0e206881}{S3DMesh}, \hyperlink{class_s3_d_rect_a7b3fb925a55d8a22a354829d6a5afa3d}{S3DRect}, \hyperlink{class_s3_d_tetraeder_a5f77481efa810aafb63e9d1d5c14ceea}{S3DTetraeder}, and \hyperlink{class_s3_d_triangle_a35428b5799c8d51a6c57d1fdb5b575a1}{S3DTriangle}.
-
-\hypertarget{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}{
-\index{S3DPrimitive@{S3DPrimitive}!move@{move}}
-\index{move@{move}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S3DPrimitive::move (double {\em dx}, \/  double {\em dy}, \/  double {\em dz})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_s3_d_primitive_a73a178ec2e1aa8e95f01baf0552724a9}
-
-
-Virtual method. Implementations are responsible for moving the primitive. 
-
-
-
-Implemented in \hyperlink{class_s3_d_cube_ab21a1988528297602452984f8a3c093e}{S3DCube}, \hyperlink{class_s3_d_line_a38203e499c32f14ff5da3b7c17861881}{S3DLine}, \hyperlink{class_s3_d_mesh_a15edf10bf8a749627f11235c618734f7}{S3DMesh}, \hyperlink{class_s3_d_rect_a97fcf9a2380d07c59bc12db8bd5949bc}{S3DRect}, \hyperlink{class_s3_d_tetraeder_a3acda1d545e2f078abf299b1c424b7bc}{S3DTetraeder}, and \hyperlink{class_s3_d_triangle_a7f168122e4ed627fcb6489852a56982b}{S3DTriangle}.
-
-\hypertarget{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}{
-\index{S3DPrimitive@{S3DPrimitive}!rotate@{rotate}}
-\index{rotate@{rotate}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S3DPrimitive::rotate (double {\em rx}, \/  double {\em ry}, \/  double {\em rz}, \/  {\bf S3DPoint} $\ast$ {\em anchor} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_s3_d_primitive_a23eb36b6bd48643e8f7be4b950592d9e}
-
-
-Virtual method. Implementations are responsible for rotating the primitive. 
-
-
-
-Implemented in \hyperlink{class_s3_d_cube_a2e574649ca6ddd805c5ecdb7932f3ac1}{S3DCube}, \hyperlink{class_s3_d_line_a4d23495df2c8f45855d8b80d30b01d30}{S3DLine}, \hyperlink{class_s3_d_mesh_affff1ac3ef33b293a9ec9881a4e13993}{S3DMesh}, \hyperlink{class_s3_d_rect_a1d3b8406b588abf19cff5f8a6d6de2e2}{S3DRect}, \hyperlink{class_s3_d_tetraeder_aa06cc6b851e9a3abce9f68830340007a}{S3DTetraeder}, and \hyperlink{class_s3_d_triangle_a3e739f6c9c176e58cb734db7328cf039}{S3DTriangle}.
-
 \hypertarget{class_s3_d_primitive_a1c8f036193987522bdfb6a49b9b74000}{
 \index{S3DPrimitive@{S3DPrimitive}!setColor@{setColor}}
 \index{setColor@{setColor}!S3DPrimitive@{S3DPrimitive}}
@@ -163,30 +119,7 @@ Used to influence, if the primitive is filled or just wireframe.
 \item[\mbox{$\leftarrow$} {\em fill}]True, to make the primitive filled, else false. \end{DoxyParams}
 
 
-\subsection{Member Data Documentation}
-\hypertarget{class_s3_d_primitive_afc81699d5253aab2757a2c5e33848a22}{
-\index{S3DPrimitive@{S3DPrimitive}!color@{color}}
-\index{color@{color}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S3DPrimitive::color}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_s3_d_primitive_afc81699d5253aab2757a2c5e33848a22}
-\hypertarget{class_s3_d_primitive_ae8ff735495c481dbbd0c99ffe16d954f}{
-\index{S3DPrimitive@{S3DPrimitive}!id@{id}}
-\index{id@{id}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S3DPrimitive::id}}}
-\label{class_s3_d_primitive_ae8ff735495c481dbbd0c99ffe16d954f}
-\hypertarget{class_s3_d_primitive_a08ee26517002051f19202d8b62bf2b46}{
-\index{S3DPrimitive@{S3DPrimitive}!id\_\-max@{id\_\-max}}
-\index{id\_\-max@{id\_\-max}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{id\_\-max}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S3DPrimitive::id\_\-max} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_s3_d_primitive_a08ee26517002051f19202d8b62bf2b46}
-\hypertarget{class_s3_d_primitive_ae5b091719cc1afa825a4ba0e1dfce670}{
-\index{S3DPrimitive@{S3DPrimitive}!isFilled@{isFilled}}
-\index{isFilled@{isFilled}!S3DPrimitive@{S3DPrimitive}}
-\subsubsection[{isFilled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf S3DPrimitive::isFilled}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_s3_d_primitive_ae5b091719cc1afa825a4ba0e1dfce670}
-
-
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_s3_d_primitive_8h}{S3DPrimitive.h}\item 
-\hyperlink{_s3_d_primitive_8cpp}{S3DPrimitive.cpp}\end{DoxyCompactItemize}
+Simple3D/\hyperlink{_s3_d_primitive_8h}{S3DPrimitive.h}\item 
+Simple3D/\hyperlink{_s3_d_primitive_8cpp}{S3DPrimitive.cpp}\end{DoxyCompactItemize}

@@ -4,6 +4,8 @@ NAME		= Demo2
 LIBS			= -lm -lX11
 
 CC			= gcc
+LIBTOOL			= libtool
+LDCONF			= ldconfig
 CXX			= g++
 CFLAGS		= -O2 -Wall
 CXXFLAGS 	= $(CFLAGS)
@@ -11,15 +13,22 @@ CXXFLAGS 	= $(CFLAGS)
 OBJS			= main.o Simple3D.o S3DMesh.o S3DTriangle.o S3DLine.o S3DPrimitive.o S3DPoint.o S3DZBuffer.o
 SOURCES		= main.cpp Simple3D.cpp S3DMesh.cpp S3DTriangle.cpp S3DLine.cpp S3DPrimitive.cpp S3DPoint.cpp S3DZBuffer.cpp
 
+LIBOBJS		= Simple3D.o S3DMesh.o S3DTriangle.o S3DLine.o S3DPrimitive.o S3DPoint.o S3DZBuffer.o
+
 default: $(OBJS)
 	$(CXX) -o $(NAME) $(OBJS) $(LIBS)
+
+lib: $(OBJS)
+	$(CXX) -shared -o libsimple3d.so -W-soname $(LIBOBJS)
 
 debug:
 	$(CXX) -g -o $(NAME) $(LIBS) $(SOURCES) $(CXXFLAGS) -D_DEBUG_
 
 demo:
 	$(CC) -o WriteDemoMesh WriteDemoMesh.c $(CFLAGS)
-
+install:
+	$(LIBTOOL) --mode=install cp libsimple3d.so /usr/lib
+	$(LDCONF) -n /usr/lib
 
 mesh:
 	./WriteDemoMesh

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Simple3D: S3DTetraeder.h Source File</title>
+<title>Simple3D: Simple3D/S3DTetraeder.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,6 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -38,10 +39,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
-      <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>S3DTetraeder.h</h1><a href="_s3_d_tetraeder_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _S3DTetraeder_</span>
+<h1>Simple3D/S3DTetraeder.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _S3DTetraeder_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _S3DTetraeder_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="global_8h.html" title="Contains basic includes (including platform-dependent) and definitions for the whole...">global.h</a>&quot;</span>
@@ -54,16 +54,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011                 <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> vertices[4];
 <a name="l00012"></a>00012                 <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> color;
 <a name="l00013"></a>00013         <span class="keyword">public</span>:
-<a name="l00014"></a>00014                 <a class="code" href="class_s3_d_tetraeder.html#ac70078c42e24160a8759fafff847ee30">S3DTetraeder</a>(<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> points[4]);
-<a name="l00015"></a>00015                 <a class="code" href="class_s3_d_tetraeder.html#ac70078c42e24160a8759fafff847ee30">S3DTetraeder</a>(<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> a, <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> b, <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> c, <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> d);
+<a name="l00014"></a>00014                 <a class="code" href="class_s3_d_tetraeder.html">S3DTetraeder</a>(<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> points[4]);
+<a name="l00015"></a>00015                 <a class="code" href="class_s3_d_tetraeder.html">S3DTetraeder</a>(<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> a, <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> b, <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> c, <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> d);
 <a name="l00016"></a>00016                 
 <a name="l00017"></a>00017                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_tetraeder.html#a3acda1d545e2f078abf299b1c424b7bc" title="Virtual method. Implementations are responsible for moving the primitive.">move</a>(<span class="keywordtype">double</span> dx, <span class="keywordtype">double</span> dy, <span class="keywordtype">double</span> dz);
 <a name="l00018"></a>00018                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_tetraeder.html#aa06cc6b851e9a3abce9f68830340007a" title="Virtual method. Implementations are responsible for rotating the primitive.">rotate</a>(<span class="keywordtype">double</span> rx, <span class="keywordtype">double</span> ry, <span class="keywordtype">double</span> rz,<a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> *anchor = NULL);
 <a name="l00019"></a>00019                 
-<a name="l00020"></a>00020                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_tetraeder.html#a35594d3c61c89fa1dbe7a6a115cea56b">draw</a>(<a class="code" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a> *d,<a class="code" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a> w,<a class="code" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a> g);
+<a name="l00020"></a>00020                 <span class="keywordtype">void</span> draw(S3DDevice *d,S3DSurface w,S3DContext g);
 <a name="l00021"></a>00021                 <span class="keywordtype">void</span> <a class="code" href="class_s3_d_tetraeder.html#a99856377365e5c26c1f86155909725ed" title="Sets the color of the primitive.">setColor</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> c);
 <a name="l00022"></a>00022                 <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="class_s3_d_tetraeder.html#ab79d98573d008f21c9a77f9d3633d6ae" title="Returns the color of the primitive.">getColor</a>();
-<a name="l00023"></a>00023                 <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> *<a class="code" href="class_s3_d_tetraeder.html#a2be4bd418fda569bf8bbfc0fbd70ef1b">getPoints</a>();
+<a name="l00023"></a>00023                 <a class="code" href="class_s3_d_point.html" title="This class is used for representing 3d-coordinates.">S3DPoint</a> *getPoints();
 <a name="l00024"></a>00024                 <span class="keywordtype">double</span> <a class="code" href="class_s3_d_tetraeder.html#a5f77481efa810aafb63e9d1d5c14ceea" title="Virtual method. Implementations are responsible for return some z-Value the primitive...">getZ</a>();  
 <a name="l00025"></a>00025 };
 <a name="l00026"></a>00026 
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Sep 17 23:58:47 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

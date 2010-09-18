@@ -18,6 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -45,9 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="contents">
-<h1>S3DRect Class Reference</h1><!-- doxytag: class="S3DRect" --><!-- doxytag: inherits="S3DPrimitive" -->
-<p><code>#include &lt;<a class="el" href="_s3_d_rect_8h_source.html">S3DRect.h</a>&gt;</code></p>
-<div class="dynheader">
+<h1>S3DRect Class Reference</h1><!-- doxytag: class="S3DRect" --><!-- doxytag: inherits="S3DPrimitive" --><div class="dynheader">
 Inheritance diagram for S3DRect:</div>
 <div class="dynsection">
  <div class="center">
@@ -61,252 +60,30 @@ Inheritance diagram for S3DRect:</div>
 <p><a href="class_s3_d_rect-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a30160c448c675829ced3c254a01ccb6e">S3DRect</a> (<a class="el" href="class_s3_d_point.html">S3DPoint</a> points[4])</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#adfec4ab2501bd4cfef0f5fd82d769942">S3DRect</a> (<a class="el" href="class_s3_d_point.html">S3DPoint</a> a, <a class="el" href="class_s3_d_point.html">S3DPoint</a> b, <a class="el" href="class_s3_d_point.html">S3DPoint</a> c, <a class="el" href="class_s3_d_point.html">S3DPoint</a> d)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a97fcf9a2380d07c59bc12db8bd5949bc">move</a> (double dx, double dy, double dz)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Virtual method. Implementations are responsible for moving the primitive.  <a href="#a97fcf9a2380d07c59bc12db8bd5949bc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a1d3b8406b588abf19cff5f8a6d6de2e2">rotate</a> (double rx, double ry, double rz, <a class="el" href="class_s3_d_point.html">S3DPoint</a> *anchor=NULL)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Virtual method. Implementations are responsible for rotating the primitive.  <a href="#a1d3b8406b588abf19cff5f8a6d6de2e2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#adfa6596cc2a62c83709f0f3a040333c1">draw</a> (<a class="el" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a> *d, <a class="el" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a> w, <a class="el" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a> g)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30160c448c675829ced3c254a01ccb6e"></a><!-- doxytag: member="S3DRect::S3DRect" ref="a30160c448c675829ced3c254a01ccb6e" args="(S3DPoint points[4])" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DRect</b> (<a class="el" href="class_s3_d_point.html">S3DPoint</a> points[4])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfec4ab2501bd4cfef0f5fd82d769942"></a><!-- doxytag: member="S3DRect::S3DRect" ref="adfec4ab2501bd4cfef0f5fd82d769942" args="(S3DPoint a, S3DPoint b, S3DPoint c, S3DPoint d)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>S3DRect</b> (<a class="el" href="class_s3_d_point.html">S3DPoint</a> a, <a class="el" href="class_s3_d_point.html">S3DPoint</a> b, <a class="el" href="class_s3_d_point.html">S3DPoint</a> c, <a class="el" href="class_s3_d_point.html">S3DPoint</a> d)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97fcf9a2380d07c59bc12db8bd5949bc"></a><!-- doxytag: member="S3DRect::move" ref="a97fcf9a2380d07c59bc12db8bd5949bc" args="(double dx, double dy, double dz)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a97fcf9a2380d07c59bc12db8bd5949bc">move</a> (double dx, double dy, double dz)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Virtual method. Implementations are responsible for moving the primitive. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d3b8406b588abf19cff5f8a6d6de2e2"></a><!-- doxytag: member="S3DRect::rotate" ref="a1d3b8406b588abf19cff5f8a6d6de2e2" args="(double rx, double ry, double rz, S3DPoint *anchor=NULL)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a1d3b8406b588abf19cff5f8a6d6de2e2">rotate</a> (double rx, double ry, double rz, <a class="el" href="class_s3_d_point.html">S3DPoint</a> *anchor=NULL)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Virtual method. Implementations are responsible for rotating the primitive. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfa6596cc2a62c83709f0f3a040333c1"></a><!-- doxytag: member="S3DRect::draw" ref="adfa6596cc2a62c83709f0f3a040333c1" args="(S3DDevice *d, S3DSurface w, S3DContext g)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>draw</b> (S3DDevice *d, S3DSurface w, S3DContext g)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#af1a976fbe476e7096b2ceded7ab1659c">setColor</a> (unsigned long c)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the color of the primitive.  <a href="#af1a976fbe476e7096b2ceded7ab1659c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#adbf17caac29e632afb9f380e3821a256">getColor</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the color of the primitive.  <a href="#adbf17caac29e632afb9f380e3821a256"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s3_d_point.html">S3DPoint</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a626b39ee85c2ab329258bba6ee0ac255">getPoints</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a7b3fb925a55d8a22a354829d6a5afa3d">getZ</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Virtual method. Implementations are responsible for return some z-Value the primitive.  <a href="#a7b3fb925a55d8a22a354829d6a5afa3d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbf17caac29e632afb9f380e3821a256"></a><!-- doxytag: member="S3DRect::getColor" ref="adbf17caac29e632afb9f380e3821a256" args="()" -->
+unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#adbf17caac29e632afb9f380e3821a256">getColor</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the color of the primitive. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a626b39ee85c2ab329258bba6ee0ac255"></a><!-- doxytag: member="S3DRect::getPoints" ref="a626b39ee85c2ab329258bba6ee0ac255" args="()" -->
+<a class="el" href="class_s3_d_point.html">S3DPoint</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getPoints</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b3fb925a55d8a22a354829d6a5afa3d"></a><!-- doxytag: member="S3DRect::getZ" ref="a7b3fb925a55d8a22a354829d6a5afa3d" args="()" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s3_d_rect.html#a7b3fb925a55d8a22a354829d6a5afa3d">getZ</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Virtual method. Implementations are responsible for return some z-Value the primitive. <br/></td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a30160c448c675829ced3c254a01ccb6e"></a><!-- doxytag: member="S3DRect::S3DRect" ref="a30160c448c675829ced3c254a01ccb6e" args="(S3DPoint points[4])" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">S3DRect::S3DRect </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s3_d_point.html">S3DPoint</a>&nbsp;</td>
-          <td class="paramname"> <em>points</em>[4]</td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="adfec4ab2501bd4cfef0f5fd82d769942"></a><!-- doxytag: member="S3DRect::S3DRect" ref="adfec4ab2501bd4cfef0f5fd82d769942" args="(S3DPoint a, S3DPoint b, S3DPoint c, S3DPoint d)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">S3DRect::S3DRect </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s3_d_point.html">S3DPoint</a>&nbsp;</td>
-          <td class="paramname"> <em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_s3_d_point.html">S3DPoint</a>&nbsp;</td>
-          <td class="paramname"> <em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_s3_d_point.html">S3DPoint</a>&nbsp;</td>
-          <td class="paramname"> <em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_s3_d_point.html">S3DPoint</a>&nbsp;</td>
-          <td class="paramname"> <em>d</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adfa6596cc2a62c83709f0f3a040333c1"></a><!-- doxytag: member="S3DRect::draw" ref="adfa6596cc2a62c83709f0f3a040333c1" args="(S3DDevice *d, S3DSurface w, S3DContext g)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void S3DRect::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a25c0773a29204332721bde1b164d0b84">S3DDevice</a> *&nbsp;</td>
-          <td class="paramname"> <em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a4afc89c514af26434688c7e8b382ba5e">S3DSurface</a>&nbsp;</td>
-          <td class="paramname"> <em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a46f30693e0040340e595d8228cc31779">S3DContext</a>&nbsp;</td>
-          <td class="paramname"> <em>g</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="adbf17caac29e632afb9f380e3821a256"></a><!-- doxytag: member="S3DRect::getColor" ref="adbf17caac29e632afb9f380e3821a256" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long S3DRect::getColor </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Returns the color of the primitive. </p>
-
-<p>Reimplemented from <a class="el" href="class_s3_d_primitive.html#a4102845e7754e44c51a87c0fcb391c73">S3DPrimitive</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a626b39ee85c2ab329258bba6ee0ac255"></a><!-- doxytag: member="S3DRect::getPoints" ref="a626b39ee85c2ab329258bba6ee0ac255" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_s3_d_point.html">S3DPoint</a> * S3DRect::getPoints </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7b3fb925a55d8a22a354829d6a5afa3d"></a><!-- doxytag: member="S3DRect::getZ" ref="a7b3fb925a55d8a22a354829d6a5afa3d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double S3DRect::getZ </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Virtual method. Implementations are responsible for return some z-Value the primitive. </p>
-
-<p>Implements <a class="el" href="class_s3_d_primitive.html#ab5b06d3a8e83216cc42554bb78afd2d9">S3DPrimitive</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a97fcf9a2380d07c59bc12db8bd5949bc"></a><!-- doxytag: member="S3DRect::move" ref="a97fcf9a2380d07c59bc12db8bd5949bc" args="(double dx, double dy, double dz)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void S3DRect::move </td>
-          <td>(</td>
-          <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>dx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>dy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>dz</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Virtual method. Implementations are responsible for moving the primitive. </p>
-
-<p>Implements <a class="el" href="class_s3_d_primitive.html#a73a178ec2e1aa8e95f01baf0552724a9">S3DPrimitive</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1d3b8406b588abf19cff5f8a6d6de2e2"></a><!-- doxytag: member="S3DRect::rotate" ref="a1d3b8406b588abf19cff5f8a6d6de2e2" args="(double rx, double ry, double rz, S3DPoint *anchor=NULL)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void S3DRect::rotate </td>
-          <td>(</td>
-          <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>rx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>ry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>rz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_s3_d_point.html">S3DPoint</a> *&nbsp;</td>
-          <td class="paramname"> <em>anchor</em> = <code>NULL</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Virtual method. Implementations are responsible for rotating the primitive. </p>
-
-<p>Implements <a class="el" href="class_s3_d_primitive.html#a23eb36b6bd48643e8f7be4b950592d9e">S3DPrimitive</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="af1a976fbe476e7096b2ceded7ab1659c"></a><!-- doxytag: member="S3DRect::setColor" ref="af1a976fbe476e7096b2ceded7ab1659c" args="(unsigned long c)" -->
 <div class="memitem">
 <div class="memproto">
@@ -336,8 +113,8 @@ Inheritance diagram for S3DRect:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_s3_d_rect_8h_source.html">S3DRect.h</a></li>
-<li><a class="el" href="_s3_d_rect_8cpp.html">S3DRect.cpp</a></li>
+<li>Simple3D/<a class="el" href="_s3_d_rect_8h_source.html">S3DRect.h</a></li>
+<li>Simple3D/S3DRect.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -345,7 +122,7 @@ Inheritance diagram for S3DRect:</div>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -354,7 +131,7 @@ Inheritance diagram for S3DRect:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Sep 17 23:58:47 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

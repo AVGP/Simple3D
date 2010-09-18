@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Simple3D: global.h File Reference</title>
+<title>Simple3D: Simple3D/global.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,6 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -38,15 +39,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
-      <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
 </div>
 <div class="contents">
-<h1>global.h File Reference</h1>
+<h1>Simple3D/global.h File Reference</h1>
 <p>Contains basic includes (including platform-dependent) and definitions for the whole library.  
 <a href="#_details">More...</a></p>
 <code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;cstring&gt;</code><br/>
+<code>#include &lt;cmath&gt;</code><br/>
 <code>#include &lt;X11/Xlib.h&gt;</code><br/>
 <code>#include &lt;X11/Xutil.h&gt;</code><br/>
 <code>#include &lt;X11/Xos.h&gt;</code><br/>
@@ -55,74 +57,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><a href="global_8h_source.html">Go to the source code of this file.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="global_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>&nbsp;&nbsp;&nbsp;3.14159</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="global_8h.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a>(r, g, b)&nbsp;&nbsp;&nbsp;((r &lt;&lt; 16) | (g &lt;&lt; 8) | b)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="global_8h.html#a7566fab7adbea8a8499b8e231550d26c">PLANAR_DISTANCE</a>&nbsp;&nbsp;&nbsp;300</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a598a3330b3c21701223ee0ca14316eca"></a><!-- doxytag: member="global.h::PI" ref="a598a3330b3c21701223ee0ca14316eca" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>PI</b>&nbsp;&nbsp;&nbsp;3.14159</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a118ad3ee36468a3fa616977a64864e"></a><!-- doxytag: member="global.h::RGB" ref="a4a118ad3ee36468a3fa616977a64864e" args="(r, g, b)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>RGB</b>(r, g, b)&nbsp;&nbsp;&nbsp;((r &lt;&lt; 16) | (g &lt;&lt; 8) | b)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7566fab7adbea8a8499b8e231550d26c"></a><!-- doxytag: member="global.h::PLANAR_DISTANCE" ref="a7566fab7adbea8a8499b8e231550d26c" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>PLANAR_DISTANCE</b>&nbsp;&nbsp;&nbsp;300</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Contains basic includes (including platform-dependent) and definitions for the whole library. </p>
-<hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a598a3330b3c21701223ee0ca14316eca"></a><!-- doxytag: member="global.h::PI" ref="a598a3330b3c21701223ee0ca14316eca" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PI&nbsp;&nbsp;&nbsp;3.14159</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7566fab7adbea8a8499b8e231550d26c"></a><!-- doxytag: member="global.h::PLANAR_DISTANCE" ref="a7566fab7adbea8a8499b8e231550d26c" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PLANAR_DISTANCE&nbsp;&nbsp;&nbsp;300</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4a118ad3ee36468a3fa616977a64864e"></a><!-- doxytag: member="global.h::RGB" ref="a4a118ad3ee36468a3fa616977a64864e" args="(r, g, b)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RGB</td>
-          <td>(</td>
-          <td class="paramtype">r, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">g, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">b&nbsp;</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td>&nbsp;&nbsp;&nbsp;((r &lt;&lt; 16) | (g &lt;&lt; 8) | b)</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -131,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Sep 17 23:58:47 2010 for Simple3D by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 18 06:56:04 2010 for Simple3D by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
