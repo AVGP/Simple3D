@@ -25,3 +25,4 @@ class S3DRect : public S3DPrimitive
 };
 
 #endif
+

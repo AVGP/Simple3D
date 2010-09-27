@@ -16,7 +16,6 @@ Simple3D::Simple3D(int width, int height,std::string title,int argc, char **argv
 {
 	for(int i=0;i<argc;i++)
 	{
-		if(argv[i][1] == 'D') options |= S3DOptionDebug;
 		if(argv[i][1] == 'A') options |= S3DOptionDrawAxis;
 	}
 	//This is temporary...hopefully :D
@@ -194,3 +193,4 @@ void Simple3D::reOrderEntities()
 	}
 	entityList.swap(ordered);
 }
+

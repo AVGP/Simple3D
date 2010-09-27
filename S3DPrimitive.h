@@ -24,7 +24,7 @@ class S3DPrimitive
 		bool isFilled;
 		unsigned long color;
 	public:
-		static unsigned int id_max; //unused at the moment
+		static unsigned int id_max;	//unused at the moment
 		unsigned int id;	  		//unused at the moment
 
 		/**
@@ -51,5 +51,6 @@ class S3DPrimitive
 		unsigned long getColor();
 		void setColor(unsigned long c);
 };
+
 #endif
 

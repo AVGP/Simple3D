@@ -152,3 +152,4 @@ double S3DRect::getZ()
 	
 	return (maxZ-minZ/2);
 }
+

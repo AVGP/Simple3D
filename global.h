@@ -19,9 +19,16 @@
 
 #include "types.h"
 
+
 #define PI 3.14159
 #define RGB(r,g,b) ((r << 16) | (g << 8) | b)
 #define PLANAR_DISTANCE 300
+
+
+#define S3DVERSION "0.0.1"
+#define S3DVERSION_MAJOR 0
+#define S3DVERSION_MINOR 0
+#define S3DVERSION_PATCH 1
 
 #endif
 

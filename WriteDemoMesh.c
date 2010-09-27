@@ -3,18 +3,20 @@
 
 #define RGB(r,g,b) ((r << 16) | (g << 8) | b)
 
-//#pragma pack(1)
+
+#pragma pack(0)
 typedef struct
 {
 	double x;
 	double y;
 	double z;
 } Point;
-//#pragma pack()
+#pragma pack()
+
 
 int main(void)
 {
-	FILE* file = fopen("test.s3d","wb");
+	FILE *file = fopen("test.s3d","wb");
 	Point meshdata[8];
 	
 	meshdata[0].x =  50;
@@ -57,6 +59,7 @@ int main(void)
 	colors[3] = RGB(255,255,0);
 	colors[4] = RGB(0,255,255);
 	colors[5] = RGB(255,255,255);
+
 	//Arranging the points, so that 12 triangles for a cube arise:
 	//1: 0,1,3
 	//2: 1,2,3
@@ -141,7 +144,7 @@ int main(void)
 	fwrite(&colors[5],sizeof(unsigned long),1,file);
 	
 	fclose(file);
-	printf("Done. (%i)\n",sizeof(double));
+	printf("Done. (%d)\n",sizeof(double));
 	
 	return EXIT_SUCCESS;
 }

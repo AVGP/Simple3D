@@ -57,6 +57,7 @@ class Simple3D
 	void setForeColor(S3DColor c);
 	S3DEvent getEvent();
 	void reOrderEntities();
+
 };
 
 #endif

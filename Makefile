@@ -1,46 +1,47 @@
 #Makefile for the Simple3D 3D engine
+
 NAME		= Demo2
 LIBNAME		= libsimple3d.so
-LIBS			= -lm -lX11
+
 
 CC			= gcc
 CFLAGS		= -O2 -Wall
 CXX			= g++
 CXXFLAGS 	= $(CFLAGS)
-
 LIBTOOL		= libtool
 LDCONF		= ldconfig
 
-OBJS			= main.o Simple3D.o S3DMesh.o S3DTriangle.o S3DLine.o S3DPrimitive.o S3DPoint.o S3DZBuffer.o
+
+LIBS			= -lm -lX11
+
 SOURCES		= main.cpp Simple3D.cpp S3DMesh.cpp S3DTriangle.cpp S3DLine.cpp S3DPrimitive.cpp S3DPoint.cpp S3DZBuffer.cpp
 
+OBJS		= main.o Simple3D.o S3DMesh.o S3DTriangle.o S3DLine.o S3DPrimitive.o S3DPoint.o S3DZBuffer.o
 LIBOBJS		= Simple3D.o S3DMesh.o S3DTriangle.o S3DLine.o S3DPrimitive.o S3DPoint.o S3DZBuffer.o
 
 
 default: $(OBJS)
 	$(CXX) -o $(NAME) $(OBJS) $(LIBS)
 
-lib: $(OBJS)
+lib: $(LIBOBJS)
 	$(CXX) -shared -o $(LIBNAME) -W-soname $(LIBOBJS)
 
 debug:
 	$(CXX) -g -o $(NAME) $(LIBS) $(SOURCES) $(CXXFLAGS) -D_DEBUG_
 
 
-demo:
+mesh:
 	$(CC) -o WriteDemoMesh WriteDemoMesh.c $(CFLAGS)
+	./WriteDemoMesh
 
 
 #install & clean stuff
 install:
-	$(LIBTOOL) --mode=install cp libsimple3d.so /usr/lib
+	$(LIBTOOL) --mode=install cp $(LIBNAME) /usr/lib
 	$(LDCONF) -n /usr/lib
 
-mesh:
-	./WriteDemoMesh
-
 clean:
-	rm -f $(OBJS) $(NAME) WriteDemoMesh
+	rm -f $(OBJS) $(NAME) $(LIBNAME) WriteDemoMesh
 
 clear:
 	rm *~

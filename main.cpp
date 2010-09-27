@@ -5,7 +5,6 @@ int main(int argc,char **argv)
 {
 	//First, we need to create an instance of the Simple3D-Class to init the Engine and get a window.
 	Simple3D *r = new Simple3D(500,500,"Hi there.",argc,argv);
-	
 	//Now to the fun part: We create 3 triangles:
 	S3DTriangle t(S3DPoint (-50, 0, 150),
 				  S3DPoint (  0, 0,   0),
@@ -110,7 +109,7 @@ int main(int argc,char **argv)
 	}
 	//Clean up by deleting the Simple3D-Instance.
 	delete r;
-	
+
 	return EXIT_SUCCESS;
 }
 

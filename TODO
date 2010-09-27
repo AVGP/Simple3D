@@ -1,4 +1,5 @@
 -> Porting the other primitives (Cube, Tetraeder, Rect) to base on triangles!
--> Z-Buffer implementieren
+-> Z-Buffer
 -> Alpha-Blending
 -> Texture-Mapping
+

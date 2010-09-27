@@ -32,3 +32,4 @@ class S3DMesh : public S3DPrimitive
 };
 
 #endif
+
